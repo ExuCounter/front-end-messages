@@ -1,7 +1,7 @@
 .create-btn{
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.77em;
     text-transform: uppercase;
     text-align: center;
@@ -19,8 +19,8 @@
 .create-btn-transparent{
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 0.77em;
     text-transform: uppercase;
     text-align: center;
 
