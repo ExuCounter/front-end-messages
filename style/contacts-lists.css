@@ -53,6 +53,7 @@
 .accord-contact-head input:checked ~ .accord-description{
     height: 3em;
     opacity: 1;
+    position: static;
 }
 
 .accord-description {

@@ -7,11 +7,11 @@
 }
 
 .left-col-header{
-    margin: 1.1em 1.1em 0em 1.1em;
+    margin: 1.1rem 1.1rem 0em 1.1rem;
 }
 
 .left-col-header p{
-    margin-left: 0.55em;
+    margin-left: 0.55rem;
 }
 
 .left-col-list{
@@ -21,7 +21,7 @@
 
 .left-col-list li{
     list-style-type: none;
-    padding: 1.1em;
+    padding: 1.1rem;
     position: relative;
     border-top: solid 1px #D8E6E7;
     cursor: pointer;
@@ -36,7 +36,7 @@
 .left-col-list li .name{
     font-family: Roboto;
     font-weight: 500;
-    font-size: 0.83em;
+    font-size: 0.83rem;
     color: #282A2E;
 }
 
@@ -47,26 +47,26 @@
 }
 
 .left-col-list li .message, .left-col-list li .time{
-    font-size: 0.67em;
+    font-size: 0.67rem;
 }
 
 .left-col-list .unread-messages{
     position: absolute;
     right: 0;
-    top: 0.78em;
-    right: 1.1em;
+    top: 0.78rem;
+    right: 1.1rem;
     background: #EC5252;
-    padding: 0.6em;
-    border-radius: 1.8em;
+    padding: 0.6rem;
+    border-radius: 1.8rem;
     color: #FFF;
 
 }
 
 .left-col-list .unread-messages p{
     position: absolute;
-    top: 0.19em;
-    left: 0.61em;
-    font-size: 0.67em;
+    top: 0.13rem;
+    left: 0.42rem;
+    font-size: 0.67rem;
 
 }
 

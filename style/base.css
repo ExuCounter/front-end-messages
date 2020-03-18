@@ -19,7 +19,7 @@ html, body{
 }
 
 h2{
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-weight: 300;
 }
 
@@ -35,7 +35,7 @@ h2{
 }
 
 .md-text{
-    font-size: 0.88em;
+    font-size: 0.88rem;
     color: #282A2E;
 }
 
@@ -47,15 +47,15 @@ h2{
 }
 
 .left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar  {
-    height: 0.55em;
+    height: 0.55rem;
     margin-right: 10px;
-    width: 0.22em;
+    width: 0.22rem;
     background: #fff;
 }
 
 .left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track {
-    height: 0.56em;
-    width: 0.22em;
+    height: 0.56rem;
+    width: 0.22rem;
     background: #D8E6E7;
 }
 
