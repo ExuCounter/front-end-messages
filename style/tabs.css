@@ -7,11 +7,11 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
-    margin-top: 2.22em;
+    margin-top: 2.6em;
 }
 
 .chat-tab{
-    padding: 0.67em 0em;
+    padding: 0.67em 0px;
     color: #586066;
     background-color: #FFF;
     cursor: pointer;
