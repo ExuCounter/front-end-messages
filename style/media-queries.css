@@ -26,7 +26,7 @@
         margin-left: 0.5em;
     
     }
-    .accord-description scsvg{
+    .accord-description svg{
         display: none;
     }
 }
@@ -50,6 +50,9 @@
     }
     .chat-container-tabs{
         font-size: 0.75em;
+    }
+    .accord-contact-container{
+        margin-right: 0;
     }
 }
 
