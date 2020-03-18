@@ -57,6 +57,34 @@
     .accord-description{
         margin-left: 0 !important;
     }
+    .all-contacts-btn p{
+        font-size: 0.75em;
+    }
+    .all-contacts h2{
+        font-size: 1.1em;
+    }
+    .all-contacts > div:first-child{
+        padding-right: 0.5em;
+    }
+    .accord-description{
+        text-align: start;
+        align-items: self-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .accord-contact-head svg{
+        width: 0.51em;
+    }
+    .accord-description .parent{
+        padding: 0em;
+    }
+    .accord-contact .number-contacts{
+        margin: 0;
+        display: block;
+    }
+    .md-text{
+        font-size: 0.72em;
+    }
 }
 
 @media screen and (max-width: 568px){
@@ -66,6 +94,31 @@
     .welcome-chat{
         padding: 0em 0.25em;
         margin-top: 3.5em;
+    }
+    .left-col-list li .name {
+        font-size: 0.68em;
+    }
+    .left-col-list li {
+        padding: 0.5em 0.5em 0.25em 0.5em;
+    }
+    .left-col-list .unread-messages{
+        right: 0.5em;
+        top: 0.38em;
+        padding: 0.4em;
+    }
+    .left-col-list .unread-messages p{
+        top: 0.03em;
+        left: 0.41em;
+        font-size: 0.57em;
+    }
+    .create-btn{
+        padding: 0.64rem 0rem;
+    }
+    .search-container{
+        padding: 0.44rem 0rem;
+    }
+    .create-btn-transparent{
+        padding: 0.64rem 0rem;
     }
 }
 

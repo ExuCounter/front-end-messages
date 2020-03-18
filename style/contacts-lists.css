@@ -61,20 +61,20 @@
     height: 0em;
     transition: 0.3s;
     opacity: 0;
-    margin-left: 1em;
+    margin-left: 1rem;
     border-top: solid 1px #D8E6E7;
 
 }
 
 .accord-contact-head .accord-description:nth-child(5){
-    padding-left: 1em;
-    margin-left: 0em;
-    margin-top: 0.26em;
+    padding-left: 1rem;
+    margin-left: 0rem;
+    margin-top: 0.26rem;
 }
 
 .accord-description .parent{
-    font-size: 0.77em;
-    padding: 0em 0.6em;
+    font-size: 0.77rem;
+    padding: 0em 0.6rem;
 }
 
 .accord-description .child{

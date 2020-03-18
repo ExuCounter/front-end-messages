@@ -2,7 +2,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.77em;
+    font-size: 0.77rem;
     text-transform: uppercase;
     text-align: center;
 
@@ -10,9 +10,9 @@
     border-radius: 3px; 
 
     color: #FFF;
-    padding: 0.84em 0em;
+    padding: 0.84rem 0em;
 
-    margin: 0px 0px 1.1em 0px;
+    margin: 0px 0px 1.1rem 0px;
     cursor: pointer;
 }
 
@@ -20,7 +20,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.77em;
+    font-size: 0.77rem;
     text-transform: uppercase;
     text-align: center;
 
@@ -29,9 +29,9 @@
     border: solid 1px #76CBC6;
 
     color: #76CBC6;
-    padding: 0.67em 0em;
+    padding: 0.67rem 0em;
 
-    margin: 0em 0em 1.11em 0em;
+    margin: 0em 0em 1.11rem 0em;
     cursor: pointer;
 
     max-width: 266px;
@@ -46,13 +46,13 @@
     border: none;
     align-items: center;
     font-family: Roboto;
-    font-size: 0.88em;
+    font-size: 0.88rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
 
     color: #4E5564;
-    margin-top: 0.6em;
-    padding: 0.6em 1.1em 0.6em 1.1em;
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.1rem 0.6rem 1.1rem;
     background-color: #FFF;
 }
 

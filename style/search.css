@@ -1,7 +1,7 @@
 .search-container{
     border: solid 1px #D8E6E7;
-    border-radius: 0.22em;
-    padding: 0.67em 0em;
+    border-radius: 0.22rem;
+    padding: 0.67rem 0rem;
 
     display: flex;
     align-items: top;
@@ -9,14 +9,14 @@
 }
 
 .search-container svg{
-    margin: 0px 0.5em 0px 0.55em;
+    margin: 0px 0.5rem 0px 0.55rem;
     cursor: pointer;
 }
 
 .search-container input{
     border: none;
     font-family: Roboto;
-    font-size: 0.67em;
+    font-size: 0.67rem;
     color: #7B9698;
 
     width: 100%;
