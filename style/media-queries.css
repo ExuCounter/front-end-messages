@@ -48,6 +48,9 @@
     .left-col-list {
         height: 100vh;
     }
+    .chat-container-tabs{
+        font-size: 0.75em;
+    }
 }
 
 @media screen and (max-width: 568px){
