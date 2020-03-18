@@ -18,6 +18,17 @@
         padding: 0em 0.25em;
         margin-top: 7.5em;
     }
+    .accord-contact{
+        display: flex;
+        padding-right: 1.45em;
+    }
+    .all-contacts{
+        margin-left: 0.5em;
+    
+    }
+    .accord-description scsvg{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -27,6 +38,15 @@
     .welcome-chat{
         padding: 0em 0.25em;
         margin-top: 5.5em;
+    }
+    .accord-description{
+        margin-left: 1em;
+    }
+    .accord-contact{
+        margin-right: 0em;
+    }
+    .left-col-list {
+        height: 100vh;
     }
 }
 

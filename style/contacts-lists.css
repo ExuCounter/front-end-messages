@@ -1,0 +1,82 @@
+.all-contacts{
+    margin-left: 4em;
+
+}
+
+.accord-contact{
+    display: flex;
+    padding-right: 2.85em;
+
+}
+
+.accord-contact-container{
+    overflow-y: scroll;
+    margin-right: 1em;
+
+}
+
+.all-contacts > div:first-child{
+    padding-bottom: 1.7em;
+}
+
+.accord-contact-head{
+    cursor: pointer;
+    font-weight: 400;
+    border-bottom: solid 1px #D8E6E7;
+    padding: 0.3em 0em 0.1em 0em;
+    width: 100%;
+}
+
+.accord-contact .number-contacts{
+    font-size: 0.67em;
+    color: #4E5564;
+    margin: 0em 0.6em 0em 1.4em;
+
+}
+
+.accord-contact-head input{
+    display: none;
+}
+
+.accord-contact-head svg{
+    transition: 0.3s;
+}
+
+.accord-contact-head input:checked ~ svg{
+    transform: rotate(180deg);
+}
+
+.accord-description:nth-child(1){
+    display: none;
+}
+
+.accord-contact-head input:checked ~ .accord-description{
+    height: 3em;
+    opacity: 1;
+}
+
+.accord-description {
+    display: flex;
+    align-items: center;
+    height: 0em;
+    transition: 0.3s;
+    opacity: 0;
+    margin-left: 1em;
+    border-top: solid 1px #D8E6E7;
+
+}
+
+.accord-contact-head .accord-description:nth-child(5){
+    padding-left: 1em;
+    margin-left: 0em;
+    margin-top: 0.26em;
+}
+
+.accord-description .parent{
+    font-size: 0.77em;
+    padding: 0em 0.6em;
+}
+
+.accord-description .child{
+    padding-top: 1px;
+}

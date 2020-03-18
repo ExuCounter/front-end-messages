@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/buttons.css">
     <link rel="stylesheet" href="style/search.css">
+    <link rel="stylesheet" href="style/contacts-lists.css">
     <link rel="stylesheet" href="style/media-queries.css">
 
     <!-- FONTS -->
@@ -182,7 +183,7 @@
                 </ul>
             </div>
             <div class="col-lg-9 col-xs-6 col-md-8 chat-right-col chat-main-col">
-                <div class="welcome-chat">
+                <div class="welcome-chat active">
                     <h1 class="lg-heading text-center">Добро пожаловать</h1>
                     <div class="sm-text text-center">
                         Вы можете создать чат или продолжить общение в текущих чатах 
@@ -191,15 +192,376 @@
                         Создать чат
                     </div>
                 </div>
+                <div class="all-contacts">
+                    <div сlass='all-contacts-heading'>
+                        <h2>
+                            Добро пожаловать!
+                        </h2>
+                        <p class="sm-text">
+                            Вы можете создать чат или общаться в индивидуальных чатах с контактами
+                        </p>
+                    </div>
+                    <div class="accord-contact-container">
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox" checked />
+                                <span class="type md-text">Администраторы</span>
+                                <span class="number-contacts">5 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div>
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox" checked />
+                                <span class="type md-text">Учителя</span>
+                                <span class="number-contacts">5 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div>
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox"/>
+                                <span class="type md-text">Родители</span>
+                                <span class="number-contacts">5 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div> 
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox" />
+                                <span class="type md-text">Группа Солнышки</span>
+                                <span class="number-contacts">5 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div> 
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox" />
+                                <span class="type md-text">Зайчата семья</span>
+                                <span class="number-contacts">25 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div> 
+                        <div class="accord-contact">
+                            <label class="accord-contact-head">
+                                <input type="checkbox" />
+                                <span class="type md-text">Зайчата семья</span>
+                                <span class="number-contacts">25 контактов</span>
+                                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Карлова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева</span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Екатерина Иванова</span>
+                                    <span class='child sm-text'>ребенок: Сергей Дмитриев</span>
+                                </div>     
+                                <div class="accord-description">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="30" height="30" rx="3" fill="#76CBC6"/>
+                                        <rect width="30" height="30" rx="3" fill="url(#pattern0)"/>
+                                        <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="translate(0 -0.249908) scale(0.000366166)"/>
+                                        </pattern>
+                                    </svg>
+                                    <span class='parent '>Анна Дмитриева  </span>
+                                    <span class='child sm-text'>дети: Антон Дмитриев, Алина Дмитриева</span>
+                                </div>                                                 
+                            </label>
+                        </div> 
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
-      <!-- <label class="container">
+      <label class="container">
         <input type="checkbox">
         <span class="checkmark"></span>
         <span class='toggle-check'></span>
-      </label> -->
+      </label>
 
 <script src="script.js"></script>
 </body>

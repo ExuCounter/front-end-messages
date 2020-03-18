@@ -18,6 +18,11 @@ html, body{
     font-family: Roboto;
 }
 
+h2{
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
 .lg-heading{
     font-size: 2rem;
     font-weight: 300;
@@ -26,40 +31,46 @@ html, body{
 
 .sm-text{
     font-size: 0.67rem;
+    color: #4E5564;
+}
+
+.md-text{
+    font-size: 0.88em;
+    color: #282A2E;
 }
 
 .chat-container{
     max-width: 1128px;
     display: block;
     margin: 0 auto;
-    
     background-color: #FFF;
 }
 
-.left-col-list::-webkit-scrollbar {
+.left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar  {
     height: 0.55em;
+    margin-right: 10px;
     width: 0.22em;
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-track {
+.left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track {
     height: 0.56em;
     width: 0.22em;
     background: #D8E6E7;
 }
 
-.left-col-list::-webkit-scrollbar-thumb {
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container:-webkit-scrollbar-thumb {
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;
     /*-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);*/
 }
 
-.left-col-list::-webkit-scrollbar-corner {
+.left-col-list::-webkit-scrollbar-corner, .accord-contact-container::-webkit-scrollbar-corner {
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-thumb {
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container::-webkit-scrollbar-thumb {
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;

@@ -63,3 +63,7 @@
 .all-contacts-btn:hover{
     background: #E4EEEF;
 }
+
+.all-contacts-btn.active{
+    background: #E4EEEF;
+}
