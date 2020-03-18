@@ -39,3 +39,27 @@
     margin: 0 auto;
 
 }
+
+.all-contacts-btn{
+    display: flex;
+    width: 100%;
+    border: none;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 0.88em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    color: #4E5564;
+    margin-top: 0.6em;
+    padding: 0.6em 1.1em 0.6em 1.1em;
+    background-color: #FFF;
+}
+
+.all-contacts-btn svg{
+    margin-right: 9px;
+}
+
+.all-contacts-btn:hover{
+    background: #E4EEEF;
+}
