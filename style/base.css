@@ -1,0 +1,23 @@
+body{
+    background: #D8E6E7;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+*, html, body, p{
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container{
+    max-width: 1128px;
+    display: block;
+    margin: 0 auto;
+    
+    background-color: #FFF;
+
+    
+}

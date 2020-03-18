@@ -1,0 +1,19 @@
+.chat-container-tabs{
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.chat-tab{
+    padding: 12px 0px;
+    color: #586066;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.chat-tab.active{
+    font-weight: bold;
+    background: #E4EEEF;
+    color: #615D6A;
+}
