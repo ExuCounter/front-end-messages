@@ -1,0 +1,41 @@
+.create-btn{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.77em;
+    text-transform: uppercase;
+    text-align: center;
+
+    background: #76CBC6;
+    border-radius: 3px; 
+
+    color: #FFF;
+    padding: 0.84em 0em;
+
+    margin: 0px 0px 1.1em 0px;
+    cursor: pointer;
+}
+
+.create-btn-transparent{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+
+    background: transparent;
+    border-radius: 3px; 
+    border: solid 1px #76CBC6;
+
+    color: #76CBC6;
+    padding: 0.67em 0em;
+
+    margin: 0em 0em 1.11em 0em;
+    cursor: pointer;
+
+    max-width: 266px;
+    display: block;
+    margin: 0 auto;
+
+}

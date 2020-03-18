@@ -2,11 +2,16 @@
     text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 18px;
+    font-size: 1em;
+    border-bottom: solid 1px #D8E6E7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    margin-top: 2.22em;
 }
 
 .chat-tab{
-    padding: 12px 0px;
+    padding: 0.67em 0em;
     color: #586066;
     background-color: #FFF;
     cursor: pointer;

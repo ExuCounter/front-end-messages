@@ -1,3 +1,96 @@
 .chat-container-main .chat-main-col{
     padding: 0;
 }
+
+.chat-left-col{
+    border-right: solid 1px #D8E6E7;
+}
+
+.left-col-header{
+    margin: 1.1em 1.1em 0.6em 1.1em;
+}
+
+.left-col-header span{
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 0.88em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    color: #4E5564;
+    margin-top: 1.1em;
+}
+
+.left-col-header p{
+    margin-left: 0.55em;
+}
+
+.left-col-list{
+    overflow-y: scroll;
+    height: 55vh;
+}
+
+.left-col-list li{
+    list-style-type: none;
+    padding: 1.1em;
+    position: relative;
+    border-top: solid 1px #D8E6E7;
+    cursor: pointer;
+
+}
+
+.left-col-list li .short-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-col-list li .name{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 0.88em;
+    color: #282A2E;
+}
+
+.left-col-list li .short-desc-row{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-col-list li .message, .left-col-list li .time{
+    font-size: 0.67em;
+}
+
+.left-col-list .unread-messages{
+    position: absolute;
+    right: 0;
+    top: 0.78em;
+    right: 1.1em;
+    background: #EC5252;
+    padding: 0.6em;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 1.8em;
+    color: #FFF;
+
+}
+
+.left-col-list .unread-messages p{
+    position: absolute;
+    top: 0.19em;
+    left: 0.61em;
+    font-size: 0.67em;
+
+}
+
+/* Welcome Screen */
+
+.welcome-chat{
+    padding: 0em 0.25em;
+    margin-top: 10.5em;
+}
+
+.welcome-chat .sm-text{
+    padding-bottom: 1.25em;
+}
