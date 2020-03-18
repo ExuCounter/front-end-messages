@@ -39,9 +39,6 @@
         padding: 0em 0.25em;
         margin-top: 5.5em;
     }
-    .accord-description{
-        margin-left: 1em;
-    }
     .accord-contact{
         margin-right: 0em;
     }
@@ -53,6 +50,12 @@
     }
     .accord-contact-container{
         margin-right: 0;
+    }
+    .accord-contact-head .accord-description:nth-child(5){
+        padding-left: 0 !important;
+    }
+    .accord-description{
+        margin-left: 0 !important;
     }
 }
 
