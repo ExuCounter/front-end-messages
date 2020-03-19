@@ -20,6 +20,28 @@
     transition: 0.1s ease-in-out;
 }
 
+.cancel-btn{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.77rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: transparent;
+    border-radius: 3px; 
+    border: solid 1px #EC5252;
+    width: 100%;
+
+    color: #EC5252;
+    padding: 0.84rem 0em;
+
+    margin: 0px 0px 1.1rem 0px;
+    cursor: pointer;
+
+    transition: 0.1s ease-in-out;
+}
+
 .create-btn.disabled{
     background: #D8E6E7;;
 }
@@ -37,6 +59,45 @@
     margin: 0 auto;
 
 }
+
+.create-btn-transparent:hover{
+    color: #47BAB3;
+    border: solid 1px #47BAB3;
+    background-color: transparent !important;
+}
+
+.create-btn-transparent:focus, .create-btn-transparent:active{
+    color: #8BBDBA;
+    border: solid 1px #8BBDBA;
+    background-color: transparent;
+}
+
+.create-btn:hover{
+    background-color: #47BAB3;
+    
+}
+
+.create-btn:focus, .create-btn:active{
+    background-color: #8BBDBA;
+}
+
+.cancel-btn:hover{
+    background-color: #EC5252;
+    color: #FFF;
+}
+
+.cancel-btn:active, .cancel-btn:focus{
+    background-color: #C36767;;
+    color: #FFF;
+}
+
+.chat--create-btn{
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+}
+
 
 .all-contacts-btn{
     display: flex;
@@ -77,6 +138,10 @@
 
 }
 
+.cancel-create-btn:hover, .cancel-create-btn:hover:before, .cancel-create-btn:hover:after{
+    background-color: #E6EFEF;
+}
+
 .cancel-create-btn:before, .cancel-create-btn:after{
     content:'';
     position:absolute;
@@ -86,6 +151,10 @@
     background:#D8E6E7;
     bottom: 0.1rem;
 
+}
+
+.cancel-create-btn.disabled, .cancel-create-btn.disabled:before, .cancel-create-btn.disabled:after{
+    background: #E9E9E9;
 }
 
 .cancel-create-btn:before{

@@ -18,7 +18,7 @@
 }
 
 .chat-tab.active{
-    font-weight: bold;
+    font-weight: 500;
     background: #E4EEEF;
     color: #615D6A;
 }

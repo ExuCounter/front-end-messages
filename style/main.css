@@ -103,30 +103,6 @@
     padding: 1.12em 3.44em 1.12em 1.38em;
 }
 
-.add-users {
-    display: block;
-}
-
-.add-users .new-chat-input--container{
-    margin: 1.25rem 0rem 0.95rem;
-    width: 68%;
-}
-
-.add-users .add-users-search{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-}
-
-.add-users .add-users-search .search-container{
-    width: 50%;
-}
-
-.add-users .add-users-search h3{
-    margin: 0em;
-}
-
 .new-chat.active{
     display: block;
 }
@@ -187,9 +163,40 @@
     text-align: center;;
 }
 
-.chat--create-btn{
-    border: none;
-    background-color: transparent;
-    display: block;
-    margin: 0 auto;
+/* ADD USERS */
+
+
+.add-users {
+    display: none;
+}
+
+.add-users .new-chat-input--container{
+    margin: 1.25rem 0rem 0.95rem;
+    width: 68%;
+}
+
+.add-users .add-users-search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.add-users .add-users-search .search-container{
+    width: 50%;
+}
+
+.add-users .add-users-search h3{
+    margin: 0em;
+}
+
+.add-users .cancel-btn{
+    max-width: 174px;
+    margin-top: 30px;
+
+}
+
+.add-users .create-btn{
+    max-width: 264px;
+    margin:0rem 1rem;
 }

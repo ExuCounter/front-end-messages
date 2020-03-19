@@ -5,10 +5,12 @@ let welcomeChatScreen = document.querySelector('.welcome-chat');
 let allContactsScreen = document.querySelector('.all-contacts');
 let chatRightColumn = document.querySelector('.chat-right-col');
 let createChatButtons = document.querySelectorAll('.create-chat-btn');
-let newChatScreen = document.querySelector('.new-chat');
-let cancelCreateChatButtons = document.querySelectorAll('.cancel-create-btn');
+let newChatScreen = document.querySelector('.new-chat-start');
+let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn');
 let contactHeadCheckBoxes = document.querySelectorAll('.contact-head-label input');
 let contactHeadSubCheckBoxes = document.querySelectorAll('.parent-checkbox-sub input');
+let addUsersScreen = document.querySelector('.add-users');
+let addUsersBtn = document.querySelector('.chat--create-btn');
 
 contactHeadCheckBoxes.forEach((checkbox)=>{
     checkbox.addEventListener('click', ()=>{
@@ -40,7 +42,7 @@ contactHeadSubCheckBoxes.forEach((checkbox)=>{
     })
 });
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen];
 
 /* Функция для отключения всех экранов,
    кроме одного по индексу */
@@ -124,3 +126,9 @@ cancelCreateChatButtons.forEach((btn)=>{
         activeScreen(screens, 0);
     });
 })
+
+/* Кнопка добавления людей в группу */
+
+addUsersBtn.addEventListener('click', ()=>{
+    activeScreen(screens, 3);
+});

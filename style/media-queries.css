@@ -1,3 +1,9 @@
+@media screen and (max-width: 1400px){
+    .add-users .accord-contact-container {
+        height: 38vh;
+    }
+}
+
 @media screen and (max-width: 1128px){
     body{
         overflow-y: auto;
@@ -53,6 +59,16 @@
     }
     .add-users .accord-description-container, .add-users .accord-description-group{
         flex-direction: column;
+    }
+    .add-users .accord-contact-container {
+        height: 68vh;
+    }
+    .add-users .create-btn{
+        margin: 1rem 0rem 0rem;
+    }
+    .add-users .cancel-btn{
+        margin-top: 0.7rem;
+    
     }
 }
 
@@ -181,6 +197,9 @@
     }
     .new-chat-heading h3{
         margin-top: 1rem;
+    }
+    .add-users .accord-contact-container {
+        margin-right: 0rem;
     }
 }
 
