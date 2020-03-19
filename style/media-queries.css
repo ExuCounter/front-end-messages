@@ -29,7 +29,6 @@
     .add-users .new-chat-input--container{
         width: 65%;
     }
-    
     .chat-container{
         margin-top: 0rem;
     }
@@ -179,11 +178,15 @@
     .new-chat-main svg{
         width: 3.44rem;
     }
+    .new-chat-main{
+        margin-top: 3rem;
+    }
     h3{
         font-size: 1rem;
     }
     .new-chat-input--container{
-        padding: 0rem 1rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
     }
     .add-users .new-chat-input--container{
         margin: 1.25rem 0rem 0.95rem;
