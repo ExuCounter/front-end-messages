@@ -55,6 +55,26 @@
     height: 3em;
     opacity: 1;
     position: static;
+    cursor: pointer;
+}
+
+.add-users .accord-contact-head input:checked ~ .accord-description-container .parent-checkbox-sub{
+    height: auto;
+    opacity: 1;
+    position: static;
+    z-index: 1;
+    cursor: default;
+    overflow: visible;
+}
+
+.add-users .parent-checkbox-sub{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    overflow:hidden;
+    cursor: default !important;
+
 }
 
 .accord-description {
@@ -81,4 +101,138 @@
 
 .accord-description .child{
     padding-top: 1px;
+}
+
+.add-users .accord-description-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-users .accord-contact label{
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0.33em 0em;
+    display: flex;
+    font-size: 0.77rem;
+    margin-bottom: -2px;
+}
+
+.add-users .accord-contact input:checked ~ .accord-description-container .accord-description{
+    opacity: 1;
+    height: auto;
+    padding-bottom: 1rem;
+    margin-top: 4px;
+}
+
+.add-users .accord-contact .accord-description{
+    margin-top: -1.38rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: default;
+}
+
+.add-users .accord-contact .parent{
+    padding-left: 1.9rem;
+}
+
+.add-users .accord-description:nth-child(2){
+    display: flex;
+}
+/* 
+.add-users .accord-description:nth-child(2){
+    padding-left: 0;
+} */
+
+.add-users .accord-contact-head .accord-description:nth-child(2){
+    padding-left: 1rem;
+    margin-left: 0rem;
+    margin-top: 0.26rem;
+}
+
+.add-users .contact-head-label{
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.add-users .contact-head-label svg{
+    color: #495A5B;
+    width: 0.6rem;
+    margin-top: 2px;
+}
+
+.add-users .contact-head-label span{
+    margin: 0rem 0.88rem 0rem 1.6rem;
+}
+
+.add-users .accord-contact-head{
+    cursor: default;
+}
+
+.add-users .contact-head-label .checkmark{
+    left: -1.6rem;
+    top: -0.3rem;
+}
+
+.add-users .accord-description-container{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.add-users .accord-contact{
+    flex-direction: column;
+
+}
+
+.add-users .accord-description{
+    padding-left: 1rem;
+    margin: 0;
+    
+}
+
+.add-users .accord-description-container.sub-description .parent-checkbox{
+    margin-left: 2rem;
+    display: flex;
+}
+
+.add-users .accord-description-container .all-parents-check{
+    font-weight: 500;
+}
+
+.add-users .accord-description-container.sub-description{
+    display: flex;
+}
+
+.add-users .accord-description-group{
+    display: flex;
+    flex-direction: row;
+}
+
+.add-users .accord-description-group > div, .add-users .accord-description{
+    border-top: solid 1px transparent;
+    cursor: pointer;
+}
+
+.add-users .accord-contact-head{
+    border-bottom: solid 1px transparent;
+}
+
+.add-users .accord-contact-container{
+    margin-right: -1.75rem;
+}
+
+.all-parents-check{
+    white-space: nowrap;
+
+}
+
+.add-users .accord-contact-container{
+    height: 55vh;
+}
+
+.add-users .parent-checkbox .parent{
+    padding-top: 0.15rem;
 }

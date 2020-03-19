@@ -103,6 +103,30 @@
     padding: 1.12em 3.44em 1.12em 1.38em;
 }
 
+.add-users {
+    display: block;
+}
+
+.add-users .new-chat-input--container{
+    margin: 1.25rem 0rem 0.95rem;
+    width: 68%;
+}
+
+.add-users .add-users-search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.add-users .add-users-search .search-container{
+    width: 50%;
+}
+
+.add-users .add-users-search h3{
+    margin: 0em;
+}
+
 .new-chat.active{
     display: block;
 }
@@ -128,9 +152,10 @@
 .new-chat-input--container{
     position: relative;
     border: solid 1px #D8E6E7;
-    width: 100%;
+    width: 80%;
     padding: 0.5rem 1rem;
     color: #282A2E;
+    border-radius: 3px;
     margin: 1rem 0rem 0rem 0rem;
 }
 

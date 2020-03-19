@@ -6,7 +6,39 @@ let allContactsScreen = document.querySelector('.all-contacts');
 let chatRightColumn = document.querySelector('.chat-right-col');
 let createChatButtons = document.querySelectorAll('.create-chat-btn');
 let newChatScreen = document.querySelector('.new-chat');
-let cancelCreateChatBtn = document.querySelector('.cancel-create-btn');
+let cancelCreateChatButtons = document.querySelectorAll('.cancel-create-btn');
+let contactHeadCheckBoxes = document.querySelectorAll('.contact-head-label input');
+let contactHeadSubCheckBoxes = document.querySelectorAll('.parent-checkbox-sub input');
+
+contactHeadCheckBoxes.forEach((checkbox)=>{
+    checkbox.addEventListener('click', ()=>{
+        if(checkbox.checked === true){
+            checkbox.closest('.accord-contact-head').querySelectorAll('.accord-description-container input').forEach((item)=>{
+                item.checked = true;
+            })
+        }
+        else{
+            checkbox.closest('.accord-contact-head').querySelectorAll('.accord-description-container input').forEach((item)=>{
+                item.checked = false;
+            })
+        }
+    })
+});
+
+contactHeadSubCheckBoxes.forEach((checkbox)=>{
+    checkbox.addEventListener('click', ()=>{
+        if(checkbox.checked === true){
+            checkbox.closest('.contact-group').querySelectorAll('.accord-description input').forEach((item)=>{
+                item.checked = true;
+            })
+        }
+        else{
+            checkbox.closest('.contact-group').querySelectorAll('.accord-description input').forEach((item)=>{
+                item.checked = false;
+            })
+        }
+    })
+});
 
 let screens = [welcomeChatScreen, allContactsScreen, newChatScreen];
 
@@ -84,9 +116,11 @@ createChatButtons.forEach((btn)=>{
 
 /* Листенер на кнопку "отменить создание чата" */
 
-cancelCreateChatBtn.addEventListener('click', ()=>{
-    createChatButtons.forEach((item)=>{
-        item.classList.remove('disabled');
+cancelCreateChatButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        createChatButtons.forEach((btn)=>{
+            btn.classList.remove('disabled');
+        });
+        activeScreen(screens, 0);
     });
-    activeScreen(screens, 0);
-});
+})
