@@ -1,17 +1,29 @@
 let chatTabs = document.querySelectorAll('.chat-tab');
 let welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading');
 let allContactsBtn = document.querySelector('.all-contacts-btn');
-let welcomeChat = document.querySelector('.welcome-chat');
+let welcomeChatScreen = document.querySelector('.welcome-chat');
 let allContactsScreen = document.querySelector('.all-contacts');
 let chatRightColumn = document.querySelector('.chat-right-col');
 let createChatButtons = document.querySelectorAll('.create-chat-btn');
 let newChatScreen = document.querySelector('.new-chat');
 let cancelCreateChatBtn = document.querySelector('.cancel-create-btn');
 
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen];
+
+/* Функция для отключения всех экранов,
+   кроме одного по индексу */
+
+function activeScreen(screens, index){
+    screens.forEach((item)=>{
+        item.classList.remove('active');
+    })  
+    screens[index].classList.add('active');
+}
 /* Мои чаты и Отслеживаемые чаты вкладки */
 
 chatTabs.forEach((item)=>{
     item.addEventListener('click', ()=>{
+        activeScreen(screens, 0);
 
         chatTabs.forEach((item)=>{
             item.classList.remove('active'); 
@@ -19,9 +31,8 @@ chatTabs.forEach((item)=>{
         createChatButtons.forEach((item)=>{
             item.classList.remove('disabled');
         });
-        welcomeChat.classList.add('active');
+
         allContactsBtn.classList.remove('active');
-        newChatScreen.classList.remove('active');
 
         if(!(item.classList.contains('active')) && item.classList.contains('admin')){
             item.classList.add('active');
@@ -38,15 +49,12 @@ chatTabs.forEach((item)=>{
 
 allContactsBtn.addEventListener('click', ()=>{
     if(allContactsBtn.classList.contains('active')){
+        activeScreen(screens, 0);
         allContactsBtn.classList.remove('active');
-        allContactsScreen.classList.remove('active');
-        welcomeChat.classList.add('active');
     }
     else{
+        activeScreen(screens, 1);
         allContactsBtn.classList.add('active');
-        allContactsScreen.classList.add('active');
-        newChatScreen.classList.remove('active');
-        welcomeChat.classList.remove('active');
         createChatButtons.forEach((item)=>{
             item.classList.remove('disabled');
         });
@@ -56,21 +64,20 @@ allContactsBtn.addEventListener('click', ()=>{
 
 /* Листенеры на кнопки "Создать чат" */
 
-createChatButtons.forEach((item)=>{
-    item.addEventListener('click', ()=>{
-        if(!(item.classList.contains('disabled'))){
-            createChatButtons.forEach((item)=>{
-                item.classList.add('disabled');
+createChatButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        if(!(btn.classList.contains('disabled'))){
+            activeScreen(screens, 2);
+            createChatButtons.forEach((btn)=>{
+                btn.classList.add('disabled');
             });
-            newChatScreen.classList.add('active');
             allContactsBtn.classList.remove('active');
-            allContactsScreen.classList.remove('active');
-            welcomeChat.classList.remove('active');
         }
         else{
-            item.classList.remove('disabled');
-            newChatScreen.classList.remove('active');
-            welcomeChat.classList.add('active');
+            activeScreen(screens, 0);
+            createChatButtons.forEach((btn)=>{
+                btn.classList.remove('disabled');
+            });
         }
     });
 })
@@ -81,6 +88,5 @@ cancelCreateChatBtn.addEventListener('click', ()=>{
     createChatButtons.forEach((item)=>{
         item.classList.remove('disabled');
     });
-    newChatScreen.classList.remove('active');
-    welcomeChat.classList.add('active');
+    activeScreen(screens, 0);
 });
