@@ -16,29 +16,21 @@
 
     margin: 0px 0px 1.1rem 0px;
     cursor: pointer;
+
+    transition: 0.1s ease-in-out;
 }
 
 .create-btn.disabled{
-    background: #E5E5E5;
+    background: #D8E6E7;;
 }
 
 .create-btn-transparent{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.77rem;
-    text-transform: uppercase;
-    text-align: center;
-
-    background: transparent;
-    border-radius: 3px; 
     border: solid 1px #76CBC6;
 
     color: #76CBC6;
     padding: 0.67rem 0em;
 
-    margin: 0em 0em 1.11rem 0em;
-    cursor: pointer;
+    background-color: transparent;
 
     max-width: 266px;
     display: block;

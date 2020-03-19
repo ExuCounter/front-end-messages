@@ -99,6 +99,7 @@
 /* New Chat */
 
 .new-chat {
+    display: none;
     padding: 1.12em 3.44em 1.12em 1.38em;
 }
 
