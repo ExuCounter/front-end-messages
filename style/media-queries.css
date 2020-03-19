@@ -94,6 +94,12 @@
     .md-text{
         font-size: 0.82rem;
     }
+    .lg-heading{
+        font-size: 1.4rem;
+    }
+    .accord-contact-container{
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 568px){
@@ -101,7 +107,7 @@
         font-size: 13px;
     }
     .welcome-chat{
-        padding: 0em 0.25rem;
+        padding: 0em 1.5rem;
         margin-top: 3.5rem;
     }
     .left-col-list li .name {
