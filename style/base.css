@@ -6,6 +6,7 @@ body{
 .row {
     margin-right: 0px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
 *, html, body, p, ul, li{
@@ -35,7 +36,7 @@ h3{
 }
 
 .default-text{
-    font-size: 0.77em;
+    font-size: 0.77rem;
     color: #282A2E;
 }
 
@@ -53,34 +54,36 @@ h3{
     max-width: 1128px;
     display: block;
     margin: 0 auto;
+    margin-top: 40px;
+    justify-content: center;
     background-color: #FFF;
 }
 
-.left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar  {
+.left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar, .chat-main::-webkit-scrollbar  {
     height: 0.55rem;
     margin-right: 10px;
     width: 0.22rem;
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track {
+.left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track, .chat-main::-webkit-scrollbar-track {
     height: 0.56rem;
     width: 0.22rem;
     background: #D8E6E7;
 }
 
-.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container:-webkit-scrollbar-thumb {
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container:-webkit-scrollbar-thumb, .chat-main:-webkit-scrollbar-thumb {
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;
     /*-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);*/
 }
 
-.left-col-list::-webkit-scrollbar-corner, .accord-contact-container::-webkit-scrollbar-corner {
+.left-col-list::-webkit-scrollbar-corner, .accord-contact-container::-webkit-scrollbar-corner, .chat-main::-webkit-scrollbar-corner {
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container::-webkit-scrollbar-thumb {
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container::-webkit-scrollbar-thumb, .chat-main::-webkit-scrollbar-thumb {
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;

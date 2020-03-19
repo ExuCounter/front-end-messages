@@ -1,0 +1,65 @@
+.chat-footer button{
+    border: none;
+    background-color: transparent;
+}
+
+.chat-footer{
+    position: sticky;
+    padding-top: 0.5rem;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 111;
+}
+
+.chat-footer > *{
+    border: solid 1px #D8E6E7;
+    cursor: pointer;
+}
+
+.chat-footer .send-files input{
+    display: none;
+    cursor: pointer;
+}
+
+.chat-footer .send-files, .chat-footer .submit-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.chat-footer .send-files{
+    margin-bottom: 0px;
+}
+
+.chat-footer .send-files svg{
+    position: relative;
+}
+
+.chat-footer .message-input{
+    border: none;
+    font-size: 0.88rem;
+    color: #9097A6; 
+    width: 100%;
+}
+
+.send-messages-col{
+    padding: 1.05rem 0.9rem;
+    background-color: #FFF;
+
+}
+
+.submit-col button[type='submit']{
+    display: block;
+    margin: 0 auto;
+    z-index: 111;
+}
+
+.chat-footer .message-input{
+    padding: 0;
+}
+
+.chat-footer .send-files{
+    cursor: pointer;
+}

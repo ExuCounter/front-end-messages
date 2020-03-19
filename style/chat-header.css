@@ -1,0 +1,41 @@
+.chat-heading-btn{
+    display: flex;
+    border: none;
+    background-color: transparent;
+}
+
+.chat-heading > div{
+    display: flex;
+}
+
+.hr-chat-heading{
+    width: 100%;
+    height: 1px;
+    background-color: #D8E6E7;
+}
+
+.chat-heading .md-text{
+    font-weight: 500;
+    padding-left: 0.75rem;
+}
+
+.chat-heading div:nth-child(3){
+    justify-content: flex-end;
+}
+
+.chat-heading div:nth-child(4){
+    justify-content: center;
+}
+
+.chat-heading{
+    padding: 1.5rem 0rem;
+}
+
+.chat-heading p{
+    white-space: nowrap;
+}
+
+.chat-heading > div svg{
+    padding-right: 0.33rem;
+    z-index: 3
+}

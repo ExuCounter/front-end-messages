@@ -11,6 +11,27 @@ let contactHeadCheckBoxes = document.querySelectorAll('.contact-head-label input
 let contactHeadSubCheckBoxes = document.querySelectorAll('.parent-checkbox-sub input');
 let addUsersScreen = document.querySelector('.add-users');
 let addUsersBtn = document.querySelector('.chat--create-btn');
+let leftColMessages = document.querySelectorAll('.left-col-message');
+let finishCreateChatBtn = document.querySelector('.finish-create-chat--btn');
+let chatScreen = document.querySelector('.chat');
+
+finishCreateChatBtn.addEventListener('click', ()=>{
+    activeScreen(screens, 4);
+});
+
+leftColMessages.forEach((message)=>{
+    message.addEventListener('click', ()=>{
+        if(!(message.classList.contains('active'))){
+            leftColMessages.forEach((item)=>{
+                item.classList.remove('active');
+            });
+            if(message.querySelector('.unread-messages')){
+                message.querySelector('.unread-messages').style.display = 'none';
+            }
+            message.classList.add('active');
+        }
+    });
+})
 
 contactHeadCheckBoxes.forEach((checkbox)=>{
     checkbox.addEventListener('click', ()=>{
@@ -42,7 +63,7 @@ contactHeadSubCheckBoxes.forEach((checkbox)=>{
     })
 });
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen];
 
 /* Функция для отключения всех экранов,
    кроме одного по индексу */

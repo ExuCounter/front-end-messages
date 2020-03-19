@@ -70,6 +70,14 @@
 
 }
 
+.left-col-list li.active{
+    background: #E4EEEF;
+}
+
+.left-col-list li.active  .unread-messages, .left-col-list li.active .time, .left-col-list li.active .message{
+    display: none;
+}
+
 /* Welcome Screen */
 
 .welcome-chat{
@@ -192,7 +200,7 @@
 
 .add-users .cancel-btn{
     max-width: 174px;
-    margin-top: 30px;
+    margin-top: 1.7rem;
 
 }
 
