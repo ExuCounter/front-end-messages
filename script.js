@@ -17,6 +17,7 @@ let chatScreen = document.querySelector('.chat');
 
 finishCreateChatBtn.addEventListener('click', ()=>{
     activeScreen(screens, 4);
+    document.body.style.overflowY = 'hidden';
 });
 
 leftColMessages.forEach((message)=>{

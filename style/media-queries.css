@@ -185,7 +185,7 @@
         font-size: 1rem;
     }
     .new-chat-input--container{
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 1rem;
         width: 100%;
     }
     .add-users .new-chat-input--container{
@@ -204,9 +204,13 @@
     .chat-heading div:nth-child(4){
         margin-top: 0rem;
     }
+    
 }
 
 @media screen and (max-width: 568px){
+    body{
+        overflow-y:hidden;
+    }
     .welcome-chat{
         padding: 0em 1.5rem;
         margin-top: 3.5rem;
@@ -244,6 +248,9 @@
     }
     .add-users .accord-contact-container {
         margin-right: 0rem;
+    }
+    .add-users .accord-contact-container {
+        height: 45vh;
     }
 }
 
