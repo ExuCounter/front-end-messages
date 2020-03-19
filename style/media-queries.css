@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 768px){
     html{
-        font-size: 14px;
+        font-size: 15px;
     }
     .welcome-chat{
         padding: 0em 0.25em;
@@ -103,15 +103,12 @@
 }
 
 @media screen and (max-width: 568px){
-    html{
-        font-size: 13px;
-    }
     .welcome-chat{
         padding: 0em 1.5rem;
         margin-top: 3.5rem;
     }
     .left-col-list li .name {
-        font-size: 0.72rem;
+        font-size: 0.77rem;
     }
     .left-col-list li {
         padding: 0.5rem 0.5rem 0.25rem 0.5rem;
@@ -122,8 +119,8 @@
         padding: 0.4rem;
     }
     .left-col-list .unread-messages p{
-        top: 0.03rem;
-        left: 0.23rem;
+        top: 0rem;
+        left: 0.25rem;
         font-size: 0.57rem;
     }
     .create-btn{
