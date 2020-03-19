@@ -23,10 +23,20 @@ h2{
     font-weight: 300;
 }
 
+h3{
+    font-size: 1.33rem;
+    font-weight: 500;
+}
+
 .lg-heading{
     font-size: 2rem;
     font-weight: 300;
     color: #333539;
+}
+
+.default-text{
+    font-size: 0.77em;
+    color: #282A2E;
 }
 
 .sm-text{

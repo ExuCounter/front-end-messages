@@ -8,12 +8,18 @@
 
     background: #76CBC6;
     border-radius: 3px; 
+    border: none;
+    width: 100%;
 
     color: #FFF;
     padding: 0.84rem 0em;
 
     margin: 0px 0px 1.1rem 0px;
     cursor: pointer;
+}
+
+.create-btn.disabled{
+    background: #E5E5E5;
 }
 
 .create-btn-transparent{
@@ -66,4 +72,36 @@
 
 .all-contacts-btn.active{
     background: #E4EEEF;
+}
+
+.cancel-create-btn{
+    border: none;
+    background: #D8E6E7;
+    font-size: 0.72rem;
+    position: relative;
+    z-index: 2;
+    padding: 0.56rem 1.35rem;
+    border-radius: 0.13rem;
+
+}
+
+.cancel-create-btn:before, .cancel-create-btn:after{
+    content:'';
+    position:absolute;
+    left:-0.3rem;
+    width:1em;
+    height:1.22rem;
+    background:#D8E6E7;
+    bottom: 0.1rem;
+
+}
+
+.cancel-create-btn:before{
+    top: 0.1rem;
+    transform: rotate(30deg);
+}
+
+.cancel-create-btn:after{
+    transform: rotate(-30deg);
+    bottom: 0.1rem;
 }

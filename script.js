@@ -4,6 +4,9 @@ let allContactsBtn = document.querySelector('.all-contacts-btn');
 let welcomeChat = document.querySelector('.welcome-chat');
 let allContactsScreen = document.querySelector('.all-contacts');
 let chatRightColumn = document.querySelector('.chat-right-col');
+let createChatBtn = document.querySelector('.create-chat-btn');
+
+/* Мои чаты и Отслеживаемые чаты вкладки */
 
 chatTabs.forEach((item)=>{
     item.addEventListener('click', ()=>{
@@ -20,6 +23,8 @@ chatTabs.forEach((item)=>{
         }
     });
 })
+
+/* Вкладка все контакты */
 
 allContactsBtn.addEventListener('click', ()=>{
     if(allContactsBtn.classList.contains('active')){

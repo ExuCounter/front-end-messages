@@ -95,3 +95,75 @@
 .all-contacts.active{
     display: block;
 }
+
+/* New Chat */
+
+.new-chat {
+    padding: 1.12em 3.44em 1.12em 1.38em;
+}
+
+.new-chat.active{
+    display: block;
+}
+
+.new-chat-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-search-input{
+    width: 100%;
+    position: relative;
+    border: none;
+    font-weight: 400;
+}
+
+.new-search-input::placeholder{
+    color: #282A2E;
+    font-size: 0.77rem;
+}
+
+.new-chat-input--container{
+    position: relative;
+    border: solid 1px #D8E6E7;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #282A2E;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.new-chat-input--container:after{
+    content: 'Название чата';
+    position: absolute;
+    top: -0.55rem;
+    font-weight: 400;
+    left: 1rem;
+    font-size: 0.67rem;
+    padding: 0rem 0.225rem;
+    background-color: #FFF;
+    color: #363945;
+}
+
+.new-chat-main{
+    margin-top: 7.94rem;
+}
+
+.new-chat-main svg{
+    display: block;
+    margin: 0 auto;
+}
+
+.new-chat-main h3{
+    color: #5BC0BA;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    text-align: center;;
+}
+
+.chat--create-btn{
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+}

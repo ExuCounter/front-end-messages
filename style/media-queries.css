@@ -29,6 +29,9 @@
     .accord-description svg{
         display: none !important;
     }
+    .new-chat-main{
+        margin-top: 5rem;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -100,6 +103,21 @@
     .accord-contact-container{
         height: 100vh;
     }
+    .new-chat {
+        padding: 0.52em 0.44em 1.12em 1.38em;
+    }
+    .new-chat-heading {
+        flex-direction: column;
+    }
+    .new-chat-main svg{
+        width: 3.44rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .new-chat-input--container{
+        padding: 0rem 1rem;
+    }
 }
 
 @media screen and (max-width: 568px){
@@ -131,6 +149,12 @@
     }
     .create-btn-transparent{
         padding: 0.64rem 0rem;
+    }
+    .new-chat {
+        padding: 0.12em 0.44em 1.12em 0.44em;
+    }
+    .new-chat-heading h3{
+        margin-top: 1rem;
     }
 }
 
