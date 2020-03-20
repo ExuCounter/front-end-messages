@@ -267,6 +267,12 @@
     body{
         background-color: #FFF;
     }
+    .private-chat .hide-seen-info{
+        left: -8rem;
+    }
+    .private-chat .hide-seen-info:after{
+        left: 8.5rem;
+    }
 }
 
 @media screen and (max-width: 480px){
