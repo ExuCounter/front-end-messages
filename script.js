@@ -23,7 +23,7 @@ let testChat = document.querySelector('.chat-1');
 let testChatCommon = document.querySelector('.chat-2');
 let commonChatScreen = document.querySelector('.common-chat');
 let seenMessagesScreen = document.querySelector('.seen-messages-screen');
-let messageInfoButtons = document.querySelectorAll('.message-info-icon');
+let messageInfoButtons = document.querySelectorAll('.common-chat .message-info-icon');
 
 let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen, seenMessagesScreen];
 
