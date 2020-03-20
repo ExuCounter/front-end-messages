@@ -243,6 +243,12 @@
     .seen-messages-screen .chat-heading{
         padding-top: 0.75rem;
     }
+    .chat-heading-delete{
+        padding-top: 1px;
+    }
+    .chat-heading > div button{
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 568px){
