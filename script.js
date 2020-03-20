@@ -136,9 +136,9 @@ chatTabs.forEach((item)=>{
     });
 })
 
-chatLeftColumn.classList.add('hide-screen');
-chatRightColumn.classList.remove('hide-screen');
-activeScreen(screens, 7);
+// chatLeftColumn.classList.add('hide-screen');
+// chatRightColumn.classList.remove('hide-screen');
+// activeScreen(screens, 7);
 
 /* Для телефонов стартовый экран */
 
