@@ -219,15 +219,14 @@
         margin-top: 3.5rem;
     }
     .left-col-list li .name {
-        font-size: 0.77rem;
+        font-size: 0.97rem;
+    }
+    
+    .left-col-list li .message{
+        font-size: 0.87rem;
     }
     .left-col-list li {
         padding: 0.5rem 0.5rem 0.25rem 0.5rem;
-    }
-    .left-col-list .unread-messages{
-        right: 0.5rem;
-        top: 0.38rem;
-        padding: 0.4rem;
     }
     .left-col-list .unread-messages p{
         top: 0rem;
