@@ -20,11 +20,17 @@ let chatFooterSubmitCol = document.querySelector('.submit-col');
 let showInfoButtons = document.querySelectorAll('.show-info-button');
 let privateScreen = document.querySelector('.private-chat');
 let testChat = document.querySelector('.chat-1');
+let testChatCommon = document.querySelector('.chat-2');
+let commonChatScreen = document.querySelector('.common-chat');
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen];
 
 testChat.addEventListener('click', ()=>{
     activeScreen(screens, 5);
+})
+
+testChatCommon.addEventListener('click', ()=>{
+    activeScreen(screens, 6);
 })
 
 showInfoButtons.forEach((item)=>{
@@ -124,7 +130,7 @@ chatTabs.forEach((item)=>{
 
 // chatLeftColumn.classList.add('hide-screen');
 // chatRightColumn.classList.remove('hide-screen');
-// activeScreen(screens, 5);
+// activeScreen(screens, 6);
 
 /* Для телефонов стартовый экран */
 

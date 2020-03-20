@@ -1,12 +1,8 @@
-.chat-created, .private-chat{
+.chat-created, .private-chat, .common-chat{
     display: none;
 }
 
-.chat.active{
-    display: block;
-}
-
-.private-chat.active{
+.chat.active, .private-chat.active, .common-chat.active{
     display: block;
 }
 
@@ -97,6 +93,7 @@
 
 .chat-main-message .chat-message-text{
     font-size: 0.77rem;
+    font-weight: 400;
 }
 
 .seen-message p{
@@ -114,7 +111,7 @@
     height: auto;
 }
 
-.private-chat .hide-seen-info:after{
+.hide-seen-info:after{
     content: '';
     position: absolute;
     width: 0.5rem;
@@ -127,7 +124,7 @@
 
 }
 
-.private-chat .hide-seen-info{
+.hide-seen-info{
     background-color: #FFF;
     padding: 1.22rem 1.22rem 1.22rem 0.77rem;
     box-shadow: 0px 5px 20px rgba(36, 52, 83, 0.12);
@@ -137,6 +134,7 @@
     bottom: 1.9rem;
     white-space: nowrap;
     z-index: 1;
+    font-weight: 300;
     display: none;
 }
 
@@ -145,4 +143,59 @@
     
     display: flex;
     align-self: flex-end;
+}
+
+.chat .message-checkbox{
+    display: none;
+}
+
+.common-chat .message-parent-info{
+    background-color: #FFF;
+    padding: 1.22rem 1.22rem 1.22rem 0.77rem;
+    box-shadow: 0px 5px 20px rgba(36, 52, 83, 0.12);
+    position: absolute;
+    border-radius: 0.35rem;
+    right: 0;
+    font-size: 0.67rem;
+    color: #4E5564;
+    bottom: 3.5rem;
+    white-space: nowrap;
+    z-index: 1;
+    font-weight: 300;
+    
+    display: none;
+};
+
+.common-chat .message-parent-info:after{
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);
+    z-index: 111;
+
+}
+
+.common-chat .chat-main-message{
+    position: relative;
+    cursor: pointer;
+}
+
+.common-chat .chat-main-message .seen-message, .private-chat .chat-main-message .seen-message{
+    font-weight: 300;
+}
+
+.common-chat .chat-main-message svg:hover{
+    cursor: pointer;
+}
+
+.common-chat .chat-main-message svg:hover ~ .message-parent-info{
+    display: block;
+}
+
+.common-chat .chat-main-message svg:hover{
+    fill:#76CBC6;
 }
