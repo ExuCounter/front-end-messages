@@ -22,6 +22,8 @@ let showInfoButtons = document.querySelectorAll('.show-info-button');
 let privateScreen = document.querySelector('.private-chat');
 let testChat = document.querySelector('.chat-1');
 
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen];
+
 testChat.addEventListener('click', ()=>{
     activeScreen(screens, 5);
 })
@@ -86,27 +88,6 @@ contactHeadSubCheckBoxes.forEach((checkbox)=>{
     })
 });
 
-let observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        for(let screen of screens){
-            if(screen.classList.contains('active')){
-                chatLeftColumn.classList.add('hide-screen');
-                chatRightColumn.classList.add('active');
-                chatRightColumn.classList.remove('hide-screen');
-            }
-        };
-    });    
-});
-
-// настраиваем наблюдатель
-let config = { attributes: true, childList: true, characterData: true }
-
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen];
-
-for(let screen of screens){
-    observer.observe(screen, config);
-};
-
 /* Функция для отключения всех экранов,
    кроме одного по индексу */
 
@@ -144,23 +125,23 @@ chatTabs.forEach((item)=>{
     item.addEventListener('click', chatTabsListener(item));
 })
 
-chatLeftColumn.classList.add('hide-screen');
-chatRightColumn.classList.remove('hide-screen');
-activeScreen(screens, 5);
+// chatLeftColumn.classList.add('hide-screen');
+// chatRightColumn.classList.remove('hide-screen');
+// activeScreen(screens, 5);
 
 /* Для телефонов стартовый экран */
 
 if(document.documentElement.clientWidth < 768){
+    chatLeftColumn.classList.remove('hide-screen');
     chatRightColumn.classList.add('hide-screen');
-    chatLeftColumn.classList.add('hide-screen');
     chatTabs.forEach((item)=>{
         item.removeEventListener('click', chatTabsListener);
     });
     chatTabs.forEach((item)=>{
+        
         item.addEventListener('click', ()=>{
             chatLeftColumn.classList.remove('hide-screen');
             chatRightColumn.classList.add('hide-screen');
-
             chatTabs.forEach((item)=>{
                 item.classList.remove('active'); 
             });
@@ -287,3 +268,23 @@ hiddenDiv.style.wordWrap = 'break-word';
 
  /* Показать приватную информацию о пользователе */
 
+
+ let observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        for(let screen of screens){
+            if(screen.classList.contains('active')){
+                chatLeftColumn.classList.add('hide-screen');
+                chatRightColumn.classList.add('active');
+                chatRightColumn.classList.remove('hide-screen');
+            }
+
+        };
+    });    
+});
+
+// настраиваем наблюдатель
+let config = { attributes: true, childList: true, characterData: true }
+
+for(let screen of screens){
+    observer.observe(screen, config);
+};
