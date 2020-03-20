@@ -31,6 +31,11 @@
     .chat-container{
         margin-top: 0rem;
     }
+    
+    .seen-messages-screen--main{
+        max-height: none;
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -96,6 +101,9 @@
     .chat-heading div:nth-child(4){
         justify-content: flex-start;
         margin-top: -1rem;
+    }
+    .seen-messages-screen--main .col:nth-child(1),.seen-messages-screen--main .col:nth-child(2) {
+        padding: 0rem 1.5rem 0rem 2.5rem;
     }
 }
 
@@ -218,7 +226,24 @@
     .chat-heading-delete{
         padding-top: 3px;
     }
+    .seen-messages-screen .chat-heading-back{
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+    .mobile-full-height{
+        height: 100%;
+    }
+    .seen-messages-screen .chat-heading-back{
+        padding-bottom: 0.75rem;
+    }
     
+    .chat-heading div:nth-child(1){
+        padding-left: 2rem;
+    }
+
+    .seen-messages-screen .chat-heading{
+        padding-top: 0.75rem;
+    }
 }
 
 @media screen and (max-width: 568px){
@@ -261,9 +286,6 @@
     .add-users .accord-contact-container {
         height: 45vh;
     }
-    .mobile-full-height{
-        height: 100%;
-    }
     body{
         background-color: #FFF;
     }
@@ -273,6 +295,10 @@
     .hide-seen-info:after{
         left: 8.5rem;
     }
+    .seen-messages-screen--main .col:nth-child(1),.seen-messages-screen--main .col:nth-child(2) {
+        padding: 0rem 1.5rem 0rem 1.5rem;
+    }
+    
 }
 
 @media screen and (max-width: 480px){
@@ -284,5 +310,9 @@
     }
     .add-users .create-btn, .add-users .cancel-btn{
         max-width: 100%;
+    }
+    .seen-messages-screen--main{
+        max-height: 100%;
+        flex-direction: column;
     }
 }

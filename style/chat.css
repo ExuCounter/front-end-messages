@@ -1,8 +1,8 @@
-.chat-created, .private-chat, .common-chat{
+.chat-created, .private-chat, .common-chat, .seen-messages-screen{
     display: none;
 }
 
-.chat.active, .private-chat.active, .common-chat.active{
+.chat.active, .private-chat.active, .common-chat.active, .seen-messages-screen.active{
     display: block;
 }
 
@@ -198,4 +198,60 @@
 
 .common-chat .chat-main-message svg:hover{
     fill:#76CBC6;
+}
+
+.seen-messages-screen .chat-main-message{
+    margin-top: 0;
+}
+
+.seen-messages-screen .chat-main-message .chat-message-text{
+    white-space: normal;
+    width: 90%;
+}
+
+.chat-heading-back{
+    justify-content: flex-end;
+}
+
+.seen-messages-screen .chat-heading{
+    padding-top: 2.5rem;
+}
+
+.seen-messages-screen .chat-heading-settings{
+    padding-left: 2rem;
+}
+
+.seen-messages-screen .chat-message-text {
+    padding: 0.6rem 1.4rem;
+}
+
+.seen-messages-screen .chat-heading > div svg {
+    padding-right: 0rem;
+}
+
+.seen-messages-screen--main ul li{
+    list-style: none;
+    display: flex;
+    font-size: 13px;
+    margin-bottom: 0.77rem;
+    color: #282A2E;
+}
+
+.seen-messages-screen--main{
+    display: flex;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.seen-messages-screen--main .col:nth-child(1){
+    padding: 0rem 3.7rem 0rem 5.7rem;
+    border-right: solid 1px #D8E6E7;
+}
+
+.seen-messages-screen--main .col:nth-child(2){
+    padding: 0rem 0rem 0rem 3.2rem;
+}
+
+.seen-messages-screen--main ul li svg{
+    margin-right: 0.4rem;
 }
