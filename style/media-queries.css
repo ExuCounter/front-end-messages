@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 1128px){
     body{
-        overflow-y: auto;
+        overflow-y: auto !important;
     }
     html{
         font-size: 16px;
@@ -103,6 +103,9 @@
     }
     .seen-messages-screen--main .col:nth-child(1),.seen-messages-screen--main .col:nth-child(2) {
         padding: 0rem 1.5rem 0rem 2.5rem;
+    }
+    .chat-main{
+        height: 100vh;
     }
 }
 
