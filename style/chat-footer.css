@@ -25,7 +25,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0rem;
     background-color: #FFF;
+}
+
+.chat-footer .submit-col button{
+    justify-content: center;
+    width:100%;
+    outline: none;
+    height:100%;
+    display: flex;
 }
 
 .chat-footer .send-files{

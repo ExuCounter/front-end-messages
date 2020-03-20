@@ -16,6 +16,7 @@ let finishCreateChatBtn = document.querySelector('.finish-create-chat--btn');
 let chatScreen = document.querySelector('.chat');
 let sendMessageCol = document.querySelector('.send-messages-col');
 let chatFooterTextarea = document.querySelector('.chat-footer textarea');
+let chatFooterSubmitCol = document.querySelector('.submit-col');
 
 sendMessageCol.addEventListener('click', ()=>{
     chatFooterTextarea.focus();
