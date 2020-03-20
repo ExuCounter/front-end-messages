@@ -98,12 +98,6 @@ let observer = new MutationObserver(function(mutations) {
     });    
 });
 
-/* Для телефонов стартовый экран */
-
-if(document.documentElement.clientWidth < 768){
-    chatRightColumn.classList.add('hide-screen');
-}
-
 // настраиваем наблюдатель
 let config = { attributes: true, childList: true, characterData: true }
 
@@ -124,8 +118,7 @@ function activeScreen(screens, index){
 }
 /* Мои чаты и Отслеживаемые чаты вкладки */
 
-chatTabs.forEach((item)=>{
-    item.addEventListener('click', ()=>{
+let chatTabsListener = function(item){
         activeScreen(screens, 0);
 
         chatTabs.forEach((item)=>{
@@ -145,8 +138,44 @@ chatTabs.forEach((item)=>{
             item.classList.add('active');
             welcomeChatHeading.innerHTML = ` Добро пожаловать `
         }
-    });
+}
+
+chatTabs.forEach((item)=>{
+    item.addEventListener('click', chatTabsListener(item));
 })
+
+/* Для телефонов стартовый экран */
+
+if(document.documentElement.clientWidth < 768){
+    chatRightColumn.classList.add('hide-screen');
+    chatLeftColumn.classList.add('hide-screen');
+    chatTabs.forEach((item)=>{
+        item.removeEventListener('click', chatTabsListener);
+    });
+    chatTabs.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            chatLeftColumn.classList.remove('hide-screen');
+            chatRightColumn.classList.add('hide-screen');
+
+            chatTabs.forEach((item)=>{
+                item.classList.remove('active'); 
+            });
+            createChatButtons.forEach((item)=>{
+                item.classList.remove('disabled');
+            });
+    
+            allContactsBtn.classList.remove('active');
+    
+            if(!(item.classList.contains('active')) && item.classList.contains('admin')){
+                item.classList.add('active');
+            }
+            if(!(item.classList.contains('active')) && !(item.classList.contains('admin'))){
+                item.classList.add('active');
+            }
+        });
+    });
+
+}
 
 /* Вкладка все контакты */
 
