@@ -267,10 +267,10 @@
     body{
         background-color: #FFF;
     }
-    .private-chat .hide-seen-info{
+    .hide-seen-info{
         left: -8rem;
     }
-    .private-chat .hide-seen-info:after{
+    .hide-seen-info:after{
         left: 8.5rem;
     }
 }
