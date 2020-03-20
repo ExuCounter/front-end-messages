@@ -74,7 +74,7 @@
     background: #E4EEEF;
 }
 
-.left-col-list li.active  .unread-messages, .left-col-list li.active .time, .left-col-list li.active .message{
+.left-col-list li.active  .unread-messages, .left-col-list li.active .time{
     display: none;
 }
 
