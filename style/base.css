@@ -54,7 +54,7 @@ h3{
     max-width: 1128px;
     display: block;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 2.4rem;
     justify-content: center;
     background-color: #FFF;
 }
@@ -87,4 +87,16 @@ h3{
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;
+}
+
+.send-messages-col textarea::-webkit-scrollbar{
+    height: 0rem;
+    width: 0rem;
+    background: transparent;
+}
+
+.send-messages-col textarea::-webkit-scrollbar-track{
+    height: 0rem;
+    width: 0rem;
+    background: transparent;
 }

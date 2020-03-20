@@ -1,6 +1,6 @@
-.chat{
+/* .chat{
     display: none;
-}
+} */
 
 .chat.active{
     display: block;
