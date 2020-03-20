@@ -92,10 +92,17 @@ let observer = new MutationObserver(function(mutations) {
             if(screen.classList.contains('active')){
                 chatLeftColumn.classList.add('hide-screen');
                 chatRightColumn.classList.add('active');
+                chatRightColumn.classList.remove('hide-screen');
             }
         };
     });    
 });
+
+/* Для телефонов стартовый экран */
+
+if(document.documentElement.clientWidth < 768){
+    chatRightColumn.classList.add('hide-screen');
+}
 
 // настраиваем наблюдатель
 let config = { attributes: true, childList: true, characterData: true }

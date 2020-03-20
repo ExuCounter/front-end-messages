@@ -98,14 +98,14 @@
         justify-content: flex-start;
         margin-top: -1rem;
     }
-    body{
-        overflow-y: scroll;
-    }
 }
 
 @media screen and (max-width: 768px){
     html{
         font-size: 15px;
+    }
+    body{
+        overflow: hidden;
     }
     .welcome-chat{
         padding: 0em 0.25em;
