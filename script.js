@@ -17,6 +17,20 @@ let chatScreen = document.querySelector('.chat');
 let sendMessageCol = document.querySelector('.send-messages-col');
 let chatFooterTextarea = document.querySelector('.chat-footer textarea');
 let chatFooterSubmitCol = document.querySelector('.submit-col');
+let showInfoButtons = document.querySelectorAll('.show-info-button');
+let privateScreen = document.querySelector('.private-chat');
+let testChat = document.querySelector('.chat-1');
+
+testChat.addEventListener('click', ()=>{
+    activeScreen(screens, 5);
+})
+
+showInfoButtons.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        item.closest('.private-chat-info').querySelector('.hide-info').classList.add('active');
+        item.classList.add('active');
+    });
+})
 
 sendMessageCol.addEventListener('click', ()=>{
     chatFooterTextarea.focus();
@@ -71,7 +85,7 @@ contactHeadSubCheckBoxes.forEach((checkbox)=>{
     })
 });
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen];
 
 /* Функция для отключения всех экранов,
    кроме одного по индексу */
@@ -208,4 +222,7 @@ hiddenDiv.style.wordWrap = 'break-word';
       // Make the hidden div display:none again
       hiddenDiv.style.visibility = 'visible';
       hiddenDiv.style.display = 'none';
-    });
+ });
+
+ /* Показать приватную информацию о пользователе */
+
