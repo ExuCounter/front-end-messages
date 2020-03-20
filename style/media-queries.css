@@ -104,9 +104,6 @@
     html{
         font-size: 15px;
     }
-    body{
-        overflow: hidden;
-    }
     .welcome-chat{
         padding: 0em 0.25em;
         margin-top: 5.5em;
@@ -164,7 +161,7 @@
         font-size: 0.7rem;
     }
     .md-text{
-        font-size: 0.82rem;
+        font-size: 1.02rem;
     }
     .lg-heading{
         font-size: 1.2rem;
@@ -228,10 +225,9 @@
     .left-col-list li {
         padding: 0.5rem 0.5rem 0.25rem 0.5rem;
     }
-    .left-col-list .unread-messages p{
-        top: 0rem;
-        left: 0.25rem;
-        font-size: 0.57rem;
+    .left-col-list .unread-messages{
+        top: 0.38rem;
+        right: 0.5rem;
     }
     .create-btn{
         padding: 0.64rem 0rem;
@@ -262,5 +258,8 @@
     }
     .new-chat.add-users{
         padding: 0em 0.44em 1.12em 0.48em;
+    }
+    .add-users .create-btn, .add-users .cancel-btn{
+        max-width: 100%;
     }
 }
