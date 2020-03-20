@@ -144,6 +144,10 @@ chatTabs.forEach((item)=>{
     item.addEventListener('click', chatTabsListener(item));
 })
 
+chatLeftColumn.classList.add('hide-screen');
+chatRightColumn.classList.remove('hide-screen');
+activeScreen(screens, 5);
+
 /* Для телефонов стартовый экран */
 
 if(document.documentElement.clientWidth < 768){
@@ -176,6 +180,8 @@ if(document.documentElement.clientWidth < 768){
     });
 
 }
+
+
 
 /* Вкладка все контакты */
 

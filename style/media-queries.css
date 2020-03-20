@@ -1,7 +1,6 @@
 @media screen and (max-width: 1520px){
     .chat-footer{
         position: sticky;
-        padding-top: 5rem;
         bottom: 0;
         left: 0;
     }
@@ -206,6 +205,18 @@
     }
     .hide-screen{
         display: none;
+    }
+    .chat-footer .message-input{
+        min-height: 1rem !important;
+    }
+    .chat-main-message svg{
+        max-width: 24px;
+    }
+    .chat-message-text{
+        padding: 1rem 1.8rem;
+    }
+    .chat-heading-delete{
+        padding-top: 3px;
     }
     
 }
