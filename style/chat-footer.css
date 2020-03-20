@@ -59,6 +59,7 @@
 .send-messages-col{
     padding: 0.1rem 0.5rem 0rem;
     cursor: default;
+    background-color: #FFF;
 }
 
 .send-messages-col textarea{

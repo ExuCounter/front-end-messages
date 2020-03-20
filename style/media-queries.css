@@ -98,6 +98,9 @@
         justify-content: flex-start;
         margin-top: -1rem;
     }
+    body{
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -204,13 +207,13 @@
     .chat-heading div:nth-child(4){
         margin-top: 0rem;
     }
+    .hide-screen{
+        display: none;
+    }
     
 }
 
 @media screen and (max-width: 568px){
-    body{
-        overflow-y:hidden;
-    }
     .welcome-chat{
         padding: 0em 1.5rem;
         margin-top: 3.5rem;

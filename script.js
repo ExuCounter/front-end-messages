@@ -4,6 +4,7 @@ let allContactsBtn = document.querySelector('.all-contacts-btn');
 let welcomeChatScreen = document.querySelector('.welcome-chat');
 let allContactsScreen = document.querySelector('.all-contacts');
 let chatRightColumn = document.querySelector('.chat-right-col');
+let chatLeftColumn = document.querySelector('.chat-left-col');
 let createChatButtons = document.querySelectorAll('.create-chat-btn');
 let newChatScreen = document.querySelector('.new-chat-start');
 let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn');
@@ -85,7 +86,25 @@ contactHeadSubCheckBoxes.forEach((checkbox)=>{
     })
 });
 
+let observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        for(let screen of screens){
+            if(screen.classList.contains('active')){
+                chatLeftColumn.classList.add('hide-screen');
+                chatRightColumn.classList.add('active');
+            }
+        };
+    });    
+});
+
+// настраиваем наблюдатель
+let config = { attributes: true, childList: true, characterData: true }
+
 let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen];
+
+for(let screen of screens){
+    observer.observe(screen, config);
+};
 
 /* Функция для отключения всех экранов,
    кроме одного по индексу */
