@@ -284,6 +284,15 @@
     .create-chat-btn{
         max-width: 100%;
     }
+    .chat .edit-message-btn p, .chat .delete-message-btn p{
+        display: none;
+    }
+    .chat .delete-message-btn svg, .chat .delete-message-btn svg{
+        margin-right: 0rem;
+    }
+    .chat-heading-edit{
+        margin: 0.68rem 0rem 0.2rem 0rem;
+    }
 }
 
 /* MEDIA 568PX */
