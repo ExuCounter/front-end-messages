@@ -149,7 +149,7 @@ chatTabs.forEach((item)=>{
     });
 })
 
-// chatLeftColumn.classList.add('hide-screen');
+// 1 chatLeftColumn.classList.add('hide-screen');
 // chatRightColumn.classList.remove('hide-screen');
 // activeScreen(screens, 8);
 
