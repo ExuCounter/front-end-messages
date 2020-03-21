@@ -130,6 +130,12 @@
     h3{
         padding: 0rem 0rem 0.5rem 0rem;
     }
+    .chat .chat-heading-settings{
+        padding-left: 0rem;
+    }
+    .chat .chat-heading-settings .edit-btn-sm{
+        padding: 0.4rem 0.4rem;
+    }
 }
 
 /* MEDIA 768PX */
@@ -287,11 +293,28 @@
     .chat .edit-message-btn p, .chat .delete-message-btn p{
         display: none;
     }
-    .chat .delete-message-btn svg, .chat .delete-message-btn svg{
-        margin-right: 0rem;
+    .chat .edit-message-btn svg, .chat .delete-message-btn svg, .chat .resend-message-btn svg{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .chat .edit-message-btn svg, .chat .delete-message-btn svg{
+        margin-right: 0;
     }
     .chat-heading-edit{
         margin: 0.68rem 0rem 0.2rem 0rem;
+    }
+    .chat-heading-settings-col{
+        padding-left: 1rem;
+    }
+    .chat-heading-settings-col{
+        justify-content: center;
+    }
+    .chat-heading-edit-col{
+        padding-left: 0;
+    }
+    
+    .chat .edit-btn-sm{
+        padding: 0.3rem 0.5rem;
     }
 }
 
