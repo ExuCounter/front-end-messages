@@ -334,6 +334,9 @@
         margin: 1.5rem 0.65rem 1rem 0.65rem;
         display: flex;
     }
+    .create-chat-btn{
+        max-width: 100%;
+    }
     
 }
 
