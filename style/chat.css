@@ -1,8 +1,8 @@
-.chat-created, .private-chat, .common-chat, .seen-messages-screen{
+.chat-created, .private-chat, .common-chat, .seen-messages-screen, .common-chat-settings{
     display: none;
 }
 
-.chat.active, .private-chat.active, .common-chat.active, .seen-messages-screen.active{
+.chat.active, .private-chat.active, .common-chat.active, .seen-messages-screen.active, .common-chat-settings.active{
     display: block;
 }
 
@@ -213,6 +213,8 @@
     justify-content: flex-end;
 }
 
+/* SEEN MESSAGE COMMON CHAT SCREEN */
+
 .seen-messages-screen .chat-heading{
     padding-top: 2.5rem;
 }
@@ -254,4 +256,63 @@
 
 .seen-messages-screen--main ul li svg{
     margin-right: 0.4rem;
+}
+
+/* PRIVATE CHAT SETTINGS */
+
+.common-chat-settings .chat-heading{
+    display: flex;
+    align-items: center;
+}
+
+.common-chat-settings .new-chat-heading .new-chat-input--container{
+    margin: 0rem;
+    width: 100%;
+}
+
+.common-chat-settings .new-chat-heading{
+    justify-content: flex-start;
+    margin: 0rem 2rem 3rem 1.82rem;
+}
+
+.common-chat-settings .col h4, .seen-messages-screen--main .col h4{
+    font-weight: normal;
+}
+
+.common-chat-settings .col:nth-child(1){
+    padding: 0rem 3.7rem 0rem 2rem;
+    border-right: solid 0px transparent;
+}
+
+.common-chat-settings--main ul {
+    margin-top: 2rem;
+}
+
+
+.common-chat-settings--main ul li{
+    margin-top: 0.8rem;
+    border-bottom: solid 1px #D8E6E7;
+}
+
+.common-chat-settings--main ul li label > div{
+    position: relative;
+}
+
+
+.common-chat-settings--main ul li p{
+    margin: 2px 0px 0px 0.4rem;
+    font-size: 0.66rem;
+    font-weight: normal;
+}
+
+.common-chat-settings .settings-buttons-container{
+    margin: 2rem 2rem 1rem 2rem;
+}
+
+.settings-buttons-container button{
+    width: 49%;
+}
+
+.settings-buttons-container button:nth-child(1){
+    margin-right: 0.75rem;
 }

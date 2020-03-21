@@ -1,4 +1,4 @@
-  /* .container {
+  .toggle-checkbox-container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -9,62 +9,56 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
+    transition: 0.3s;
   }
   
-  .container input {
+  .toggle-checkbox-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
   }
   
-  .checkmark {
+  .toggle-checkbox-container .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 18px;
-    width: 36px;
+    width: 32px;
     border-radius: 10px;
-    background-color: rgb(211, 47, 47);
+    background-color: #EC5252;
+    border: none;
   }
   
-  .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+  .toggle-checkbox-container input:checked ~ .checkmark {
+    background-color: #76CBC6;
   }
  
-  .container input:checked ~ .toggle-check {
-    left: 20px !important;
-  }
- 
-  .container .checkmark:after {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 3px;
-    width: 3px;
-    height: 7px;
-    border: solid #FFF;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  .toggle-checkbox-container input:checked ~ .toggle-check {
+    left: 15px;
+    border-color: #76CBC6;
   }
 
-  .container .checkmark:before {
+  .toggle-checkbox-container .checkmark:before {
     content: "";
     position: absolute;
-    right: 7px;
-    top: 3px;
-    width: 3px;
-    height: 7px;
-    border: solid greenyellow;
-    border-width: 0px 3px 3px 0px;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    background-image: url('/img/close.svg');
+    right: 5px;
+    top: 6px;
+    width: 7px;
+    height: 6px;
   }
 
-  .toggle-check{
+   
+  .seen-messages-screen--main  .toggle-checkbox-container .checkmark svg {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    
+  }
+
+  .toggle-checkbox-container .toggle-check{
     position: absolute;
     content: '';
     left: 0;
@@ -73,9 +67,13 @@
     width: 18px;
     height: 18px;
     border-radius: 10px;
-    background-color: black;
+    background: #FFFFFF;
+    border: 1px solid #EC5252;
+    transition: 0.3s;
 
-  }  */
+  } 
+
+  /* */
 
   .checkbox-container {
     display: block;

@@ -24,8 +24,21 @@ let testChatCommon = document.querySelector('.chat-2');
 let commonChatScreen = document.querySelector('.common-chat');
 let seenMessagesScreen = document.querySelector('.seen-messages-screen');
 let messageInfoButtons = document.querySelectorAll('.common-chat .message-info-icon');
+let commonChatSettingsScreen = document.querySelector('.common-chat-settings');
+let chatSettingsButtons = document.querySelectorAll('.chat-settings-btn');
+let pushSettingsBtn = document.querySelector('.push-settings--btn');
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen, seenMessagesScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen, seenMessagesScreen, commonChatSettingsScreen];
+
+pushSettingsBtn.addEventListener('click', ()=>{
+    activeScreen(screens, 0);
+})
+
+chatSettingsButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        activeScreen(screens, 8);
+    });
+})
 
 testChat.addEventListener('click', ()=>{
     activeScreen(screens, 5);
@@ -138,7 +151,7 @@ chatTabs.forEach((item)=>{
 
 // chatLeftColumn.classList.add('hide-screen');
 // chatRightColumn.classList.remove('hide-screen');
-// activeScreen(screens, 7);
+// activeScreen(screens, 8);
 
 /* Для телефонов стартовый экран */
 

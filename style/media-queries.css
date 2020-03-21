@@ -107,6 +107,15 @@
     .chat-main{
         height: 100vh;
     }
+    .common-chat-settings .chat-heading{
+        margin: 0.6rem 0rem;
+    }
+    .chat-tab{
+        font-size: 0.8rem;
+    }
+    h3{
+        padding: 0rem 0rem 0.5rem 0rem;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -273,7 +282,7 @@
         top: 0.38rem;
         right: 0.5rem;
     }
-    .create-btn{
+    .create-btn, .cancel-btn{
         padding: 0.64rem 0rem;
     }
     .search-container{
@@ -306,6 +315,13 @@
     .seen-messages-screen--main .col:nth-child(1),.seen-messages-screen--main .col:nth-child(2) {
         padding: 0rem 1.5rem 0rem 1.5rem;
     }
+    .settings-buttons-container button{
+        width: 100%;
+    }
+    .common-chat-settings .settings-buttons-container{
+        margin: 1.5rem 0.65rem 1rem 0.65rem;
+        display: flex;
+    }
     
 }
 
@@ -322,5 +338,8 @@
     .seen-messages-screen--main{
         max-height: 100%;
         flex-direction: column;
+    }
+    .cancel-btn{
+        max-width: 264px;
     }
 }

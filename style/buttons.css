@@ -18,6 +18,9 @@
     cursor: pointer;
 
     transition: 0.1s ease-in-out;
+
+    max-width: 264px;
+    border: solid 1px #76CBC6;
 }
 
 .cancel-btn{
@@ -40,6 +43,8 @@
     cursor: pointer;
 
     transition: 0.1s ease-in-out;
+
+    max-width: 178px;
 }
 
 .create-btn.disabled{
