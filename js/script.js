@@ -57,57 +57,63 @@ function openScreen(screens, index){
     activeScreen(screens, index);
 }
 
-openScreen(screens, 7);
+openScreen(screens, 0);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
-strangeMessages.forEach((message)=>{
-    message.addEventListener('click', ()=>{
-        if(message.querySelector('input').checked === true && !(message.classList.contains('active'))){
-            message.classList.add('active');
-            message.classList.remove('disabled');
-        }
-        else if(!(message.querySelector('input').checked === true) && message.classList.contains('active')){
-            message.classList.remove('active');
-            message.classList.add('disabled');
-        }
-        strangeMessages.forEach((message)=>{
-            if(!(message.classList.contains('active'))){
+function manageMessagesActivity(messages){
+    let counter = 0;
+    messages.forEach((message)=>{
+        message.addEventListener('click', ()=>{
+            if(message.querySelector('input').checked === true && !(message.classList.contains('active'))){
+                message.classList.add('active');
+                message.classList.remove('disabled');
+            }
+            else if(!(message.querySelector('input').checked === true) && message.classList.contains('active')){
+                message.classList.remove('active');
                 message.classList.add('disabled');
             }
-        });
+            strangeMessages.forEach((message)=>{
+                if(!(message.classList.contains('active'))){
+                    message.classList.add('disabled');
+                }
+                if(message.classList.contains('active')){
+                    counter++;
+                }
+            });
+    
+            yourMessages.forEach((message)=>{
+                if(!(message.classList.contains('active'))){
+                     message.classList.add('disabled');
+                }
+                if(message.classList.contains('active')){
+                    counter++;
+                }
+            });
 
-        yourMessages.forEach((message)=>{
-            if(!(message.classList.contains('active'))){
-                 message.classList.add('disabled');
+            if(counter == 0){
+                strangeMessages.forEach((message)=>{
+                    if(!(message.classList.contains('active'))){
+                        message.classList.remove('active');
+                        message.classList.remove('disabled');
+                    }
+                });
+        
+                yourMessages.forEach((message)=>{
+                    if(!(message.classList.contains('active'))){
+                        message.classList.remove('active');
+                        message.classList.remove('disabled');
+                    }
+                });
             }
+            counter = 0;
         });
     });
-});
+}
 
-yourMessages.forEach((message)=>{
-    message.addEventListener('click', ()=>{
-        if(message.querySelector('input').checked === true && !(message.classList.contains('active'))){
-            message.classList.add('active');
-            message.classList.remove('disabled');
-        }
-        else if(!(message.querySelector('input').checked === true) && message.classList.contains('active')){
-            message.classList.remove('active');
-            message.classList.add('disabled');
-        }
-        strangeMessages.forEach((message)=>{
-            if(!(message.classList.contains('active'))){
-                message.classList.add('disabled');
-            }
-        });
+manageMessagesActivity(strangeMessages);
+manageMessagesActivity(yourMessages);
 
-        yourMessages.forEach((message)=>{
-            if(!(message.classList.contains('active'))){
-                 message.classList.add('disabled');
-            }
-        });
-    });
-});
 
 /* Сохранить изменения в настройках общего чата */
 
