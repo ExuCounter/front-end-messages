@@ -355,6 +355,7 @@ deleteMessageButtons.forEach((btn)=>{
     });
 });
 
+//
 
  /* Наблюдатель за сменой классов */
 
