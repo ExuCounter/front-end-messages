@@ -337,22 +337,26 @@ deleteMessageButtons.forEach((btn)=>{
 
         yourMessages.forEach((message)=>{
             
-        if(message.classList.contains('active')){
+            if(message.classList.contains('active')){
                 message.outerHTML = '';
             }
+            message.classList.remove('active');
+            message.classList.remove('disabled');
 
         });
         strangeMessages.forEach((message)=>{
             if(message.classList.contains('active')){
                 message.outerHTML = '';
             }
+            message.classList.remove('active');
+                message.classList.remove('disabled');
+    
         });
-
         btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
         btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
 
-        
-    });
+        });
+    
 });
 
 //
