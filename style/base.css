@@ -9,7 +9,7 @@ body{
     margin-top: 0px;
 }
 
-*, html, body, p, ul, li, h1, h2, h3, h4, h5, h6{
+*, html, body, p, ul, li, h4, h5, h6{
     margin: 0;
     padding: 0;
 }
@@ -58,6 +58,8 @@ h3{
     justify-content: center;
     background-color: #FFF;
 }
+
+/* SCROLLBARS */
 
 .left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar, .chat-main::-webkit-scrollbar, .seen-messages-screen--main::-webkit-scrollbar  {
     height: 0.55rem;

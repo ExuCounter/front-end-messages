@@ -145,9 +145,8 @@
     align-self: flex-end;
 }
 
-.chat .message-checkbox{
-    display: none;
-}
+
+/* COMMON CHAT */
 
 .common-chat .message-parent-info{
     background-color: #FFF;
@@ -179,9 +178,13 @@
 
 }
 
-.common-chat .chat-main-message{
+.chat-main-message{
     position: relative;
     cursor: pointer;
+}
+
+.chat-main-message input{
+    display: none;
 }
 
 .common-chat .chat-main-message .seen-message, .private-chat .chat-main-message .seen-message{
@@ -212,6 +215,7 @@
 .chat-heading-back{
     justify-content: flex-end;
 }
+
 
 /* SEEN MESSAGE COMMON CHAT SCREEN */
 
@@ -284,7 +288,7 @@
     border-right: solid 0px transparent;
 }
 
-.common-chat-settings--main ul {
+.common-chat-settings--main ul , .seen-messages-screen--main ul{
     margin-top: 2rem;
 }
 
@@ -315,4 +319,13 @@
 
 .settings-buttons-container button:nth-child(1){
     margin-right: 0.75rem;
+}
+
+.chat .chat-main-message.active .chat-message-text{
+    background-color: #E4EEEF;
+}
+
+.chat .chat-main-message.disabled .chat-message-text{
+    background-color: #E4EEEF;
+    opacity: 0.35;
 }

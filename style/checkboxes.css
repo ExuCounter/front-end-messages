@@ -1,3 +1,5 @@
+  /* CHECKBOX WITH TOGGLE */
+  
   .toggle-checkbox-container {
     display: block;
     position: relative;
@@ -73,7 +75,7 @@
 
   } 
 
-  /* */
+  /* CHECKBOX DEFAULT */
 
   .checkbox-container {
     display: block;

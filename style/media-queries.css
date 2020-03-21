@@ -1,3 +1,5 @@
+/* MEDIA 1520PX */
+
 @media screen and (max-width: 1520px){
     .chat-footer{
         position: sticky;
@@ -9,11 +11,15 @@
     }    
 }
 
+/* MEDIA 1400PX */
+
 @media screen and (max-width: 1400px){
     .add-users .accord-contact-container {
         height: 38vh;
     }
 }
+
+/* MEDIA 1128PX */
 
 @media screen and (max-width: 1128px){
     body{
@@ -36,6 +42,8 @@
         max-height: none;
     }
 }
+
+/* MEDIA 992PX */
 
 @media screen and (max-width: 992px){
     html{
@@ -117,6 +125,8 @@
         padding: 0rem 0rem 0.5rem 0rem;
     }
 }
+
+/* MEDIA 768PX */
 
 @media screen and (max-width: 768px){
     html{
@@ -263,6 +273,8 @@
     }
 }
 
+/* MEDIA 568PX */
+
 @media screen and (max-width: 568px){
     .welcome-chat{
         padding: 0em 1.5rem;
@@ -324,6 +336,8 @@
     }
     
 }
+
+/* MEDIA 480PX */
 
 @media screen and (max-width: 480px){
     html{
