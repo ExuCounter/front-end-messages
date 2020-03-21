@@ -238,7 +238,7 @@
 .seen-messages-screen--main ul li{
     list-style: none;
     display: flex;
-    font-size: 13px;
+    font-size: 0.72rem;
     margin-bottom: 0.77rem;
     color: #282A2E;
 }
@@ -260,6 +260,10 @@
 
 .seen-messages-screen--main ul li svg{
     margin-right: 0.4rem;
+}
+
+.seen-messages-screen .chat-main-message.disabled .chat-message-text {
+    opacity: 1 !important;
 }
 
 /* PRIVATE CHAT SETTINGS */

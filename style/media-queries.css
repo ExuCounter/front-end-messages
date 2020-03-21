@@ -337,6 +337,12 @@
     .create-chat-btn{
         max-width: 100%;
     }
+    .seen-messages-screen--main .col h4{
+        font-size: 1rem;
+    }
+    .seen-messages-screen--main .col ul{
+        margin-top: 1rem;
+    }
     
 }
 
