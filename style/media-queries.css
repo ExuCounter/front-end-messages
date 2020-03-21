@@ -19,6 +19,12 @@
     }
 }
 
+@media screen and (max-width: 1200px){
+    .create-chat-btn{
+        max-width: 100%;
+    }
+}
+
 /* MEDIA 1128PX */
 
 @media screen and (max-width: 1128px){
@@ -271,6 +277,13 @@
     .chat-heading > div button{
         align-items: center;
     }
+    .edit-btn-sm{
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .create-chat-btn{
+        max-width: 100%;
+    }
 }
 
 /* MEDIA 568PX */
@@ -334,14 +347,23 @@
         margin: 1.5rem 0.65rem 1rem 0.65rem;
         display: flex;
     }
-    .create-chat-btn{
-        max-width: 100%;
-    }
     .seen-messages-screen--main .col h4{
         font-size: 1rem;
     }
     .seen-messages-screen--main .col ul{
         margin-top: 1rem;
+    }
+    .edit-btn-sm{
+        padding: 0.5rem 0.5rem;
+    }
+    .chat .cancel-chat-btn{
+        margin-bottom: 0.6rem;
+    }
+    .chat .chat-heading-name-col{
+        padding-bottom: 0.3rem;
+    }
+    .cancel-create-btn:after, .cancel-create-btn:before{
+        height: 1.12rem;
     }
     
 }

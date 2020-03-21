@@ -16,10 +16,13 @@ let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     pushSettingsBtn = document.querySelector('.push-settings--btn'),
     createChatButtons = document.querySelectorAll('.create-chat-btn'),
     finishCreateChatBtn = document.querySelector('.finish-create-chat--btn'),
-    messageInfoButtons = document.querySelectorAll('.common-chat .message-info-icon');
+    messageInfoButtons = document.querySelectorAll('.common-chat .message-info-icon'),
+    deleteMessageButtons = document.querySelectorAll('.delete-message-btn');
 
 let chatTabs = document.querySelectorAll('.chat-tab'),
     welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading'),
+    chatHeadingEdit = document.querySelectorAll('.chat-heading-edit'),
+    chatHeading = document.querySelectorAll('.chat-heading'),
     chatRightColumn = document.querySelector('.chat-right-col'),
     chatLeftColumn = document.querySelector('.chat-left-col'),
     sendMessageCol = document.querySelector('.send-messages-col'),
@@ -57,7 +60,7 @@ function openScreen(screens, index){
     activeScreen(screens, index);
 }
 
-openScreen(screens, 0);
+openScreen(screens, 6);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
@@ -73,7 +76,7 @@ function manageMessagesActivity(messages){
                 message.classList.remove('active');
                 message.classList.add('disabled');
             }
-            strangeMessages.forEach((message)=>{
+            message.closest('.chat').querySelectorAll('.chat-main-message.strange-message').forEach((message)=>{
                 if(!(message.classList.contains('active'))){
                     message.classList.add('disabled');
                 }
@@ -82,7 +85,7 @@ function manageMessagesActivity(messages){
                 }
             });
     
-            yourMessages.forEach((message)=>{
+            message.closest('.chat').querySelectorAll('.chat-main-message.your-message').forEach((message)=>{
                 if(!(message.classList.contains('active'))){
                      message.classList.add('disabled');
                 }
@@ -91,15 +94,23 @@ function manageMessagesActivity(messages){
                 }
             });
 
+            if(counter >= 1){
+                message.closest('.chat').querySelector('.chat-heading-edit').classList.remove('active');
+                message.closest('.chat').querySelector('.chat-heading').classList.add('active');
+
+            }
+
             if(counter == 0){
-                strangeMessages.forEach((message)=>{
+                message.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
+                message.closest('.chat').querySelector('.chat-heading').classList.remove('active');
+                message.closest('.chat').querySelectorAll('.chat-main-message.strange-message').forEach((message)=>{
                     if(!(message.classList.contains('active'))){
                         message.classList.remove('active');
                         message.classList.remove('disabled');
                     }
                 });
         
-                yourMessages.forEach((message)=>{
+                message.closest('.chat').querySelectorAll('.chat-main-message.your-message').forEach((message)=>{
                     if(!(message.classList.contains('active'))){
                         message.classList.remove('active');
                         message.classList.remove('disabled');
@@ -315,6 +326,33 @@ cancelCreateChatButtons.forEach((btn)=>{
 
 addUsersBtn.addEventListener('click', ()=>{
     activeScreen(screens, 3);
+});
+
+/* Удалить сообщение в чате */
+
+deleteMessageButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        strangeMessages = document.querySelectorAll('.chat-main-message.strange-message');
+        yourMessages = document.querySelectorAll('.chat-main-message.your-message');
+
+        yourMessages.forEach((message)=>{
+            
+        if(message.classList.contains('active')){
+                message.outerHTML = '';
+            }
+
+        });
+        strangeMessages.forEach((message)=>{
+            if(message.classList.contains('active')){
+                message.outerHTML = '';
+            }
+        });
+
+        btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
+        btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
+
+        
+    });
 });
 
 

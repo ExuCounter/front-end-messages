@@ -333,3 +333,68 @@
     background-color: #E4EEEF;
     opacity: 0.35;
 }
+
+
+/* PRIVATE CHAT */
+
+.private-chat .chat-heading-delete{
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.private-chat .private-chat-info{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.private-chat .last-connection-time{
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: #282A2E;
+    margin-left: 0.72rem;
+}
+
+.private-chat .chat-sub-heading{
+    padding: 0rem 3rem 0rem 0.75rem;
+    border-top: solid 1px #D8E6E7;
+    padding-top: 0.9rem;
+}
+
+.private-chat .private-chat-user{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.private-chat .show-info-button{
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: #282A2E;
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+}
+
+.private-chat .private-chat-info a{
+    color: #282A2E;
+    font-weight: 300;
+    font-size: 0.72rem;
+    text-decoration: underline;
+}
+
+.private-chat .show-info-button.active{
+    display: none;
+}
+
+.private-chat .hide-info{
+    display: none;
+}
+
+.private-chat .hide-info.active{
+    display: flex;
+}
+
+.private-chat .private-chat-info a:first-child{
+    margin-right: 0.4rem;
+}

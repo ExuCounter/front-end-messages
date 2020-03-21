@@ -171,3 +171,40 @@
     transform: rotate(-30deg);
     bottom: 0.1rem;
 }
+
+.edit-btn-sm{
+    padding: 0.4rem 0.9rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    margin: 0rem 0.45rem;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+.edit-btn-sm.delete-message-btn{
+    background-color: #F6544B;
+}
+
+.edit-btn-sm.edit-message-btn{
+    background: #76CBC6;
+}
+
+.edit-btn-sm.resend-message-btn{
+    background: #686F7F;
+}
+
+.edit-btn-sm.edit-message-btn{
+    border-radius: 3px;
+}
+
+
+.edit-btn-sm svg{
+    margin-right: 0.22rem;
+    height: 1rem;
+    width: 1rem;
+}
