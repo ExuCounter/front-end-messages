@@ -49,6 +49,9 @@
     html{
         font-size: 28px;
     }
+    body{
+        overflow-y: scroll !important;
+    }
     .welcome-chat{
         padding: 0em 0.25rem;
         margin-top: 7.5rem;
@@ -152,7 +155,7 @@
         margin-right: 0em;
     }
     .left-col-list {
-        height: 100vh;
+        height: fit-content;
     }
     .chat-container-tabs{
         font-size: 0.75em;
