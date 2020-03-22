@@ -1,5 +1,5 @@
 .chat-heading.active, .chat-heading-edit.active{
-    display: none;
+    display: none !important;
 
 }
 

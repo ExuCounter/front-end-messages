@@ -401,16 +401,39 @@
     .edit-btn-sm{
         padding: 0.5rem 0.5rem;
     }
-    .chat .cancel-chat-btn{
-        margin-bottom: 0.6rem;
-    }
     .chat .chat-heading-name-col{
         padding-bottom: 0.3rem;
     }
     .cancel-create-btn:after, .cancel-create-btn:before{
         height: 1.12rem;
     }
-    
+    .chat-main{
+        padding: 0.5rem 1rem 5rem 0.58rem;
+    }
+    .private-chat .chat-sub-heading {
+        padding: 0.6rem 0.75rem 0rem 0.75rem;
+    }
+    .chat-heading div:nth-child(1) {
+        padding-left: 0rem;
+    }
+    .chat-heading.row{
+        display: flex;
+        align-items: center;
+    }
+    .chat-heading div:nth-child(3) {
+        justify-content: center;
+    }
+    .chat-heading .chat-heading-btn .default-text{
+        display: none;
+    }
+    .search-container input{
+        font-size: 0.8rem;
+    }
+    .seen-messages-screen .chat-heading {
+        height: auto !important;
+        flex-direction: column;
+        padding: 1rem 1.5rem 0.5rem 1.5rem;
+    }
 }
 
 /* MEDIA 480PX */
