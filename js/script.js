@@ -65,13 +65,13 @@ let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScre
 
 /* Функция для открытия нужного экрана разработчикам */
 
-// function openScreen(screens, index){
-//     chatLeftColumn.classList.add('hide-screen');
-//     chatRightColumn.classList.remove('hide-screen');
-//     activeScreen(screens, index);
-// }
+function openScreen(screens, index){
+    chatLeftColumn.classList.add('hide-screen');
+    chatRightColumn.classList.remove('hide-screen');
+    activeScreen(screens, index);
+}
 
-openScreen(screens, 6);
+// openScreen(screens, 6);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 

@@ -172,6 +172,8 @@
     bottom: 0.1rem;
 }
 
+/* Кнопки для чата */
+
 .edit-btn-sm{
     padding: 0.4rem 0.9rem;
     border: none;
@@ -197,7 +199,6 @@
 .edit-btn-sm.gray-edit-message-btn{
     background: #686F7F !important;
 }
-
 
 .edit-btn-sm svg{
     margin-right: 0.22rem;
