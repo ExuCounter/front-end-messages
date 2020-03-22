@@ -9,6 +9,10 @@ body{
     margin-top: 0px;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
 *, html, body, p, ul, li, h4, h5, h6{
     margin: 0;
     padding: 0;
@@ -61,31 +65,31 @@ h3{
 
 /* SCROLLBARS */
 
-.left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar, .chat-main::-webkit-scrollbar, .seen-messages-screen--main::-webkit-scrollbar  {
+.left-col-list::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar, .chat-main::-webkit-scrollbar, .seen-messages-screen--main::-webkit-scrollbar, .resend-people-list::-webkit-scrollbar  {
     height: 0.55rem;
     margin-right: 10px;
     width: 0.22rem;
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track, .chat-main::-webkit-scrollbar-track, .seen-messages-screen--main::-webkit-scrollbar-track {
+.left-col-list::-webkit-scrollbar-track, .accord-contact-container::-webkit-scrollbar-track, .chat-main::-webkit-scrollbar-track, .seen-messages-screen--main::-webkit-scrollbar-track, .resend-people-list::-webkit-scrollbar {
     height: 0.56rem;
     width: 0.22rem;
     background: #D8E6E7;
 }
 
-.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container:-webkit-scrollbar-thumb, .chat-main:-webkit-scrollbar-thumb,  .seen-messages-screen--main:-webkit-scrollbar-thumb{
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container:-webkit-scrollbar-thumb, .chat-main:-webkit-scrollbar-thumb,  .seen-messages-screen--main:-webkit-scrollbar-thumb, .resend-people-list::-webkit-scrollbar-thumb{
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;
     /*-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);*/
 }
 
-.left-col-list::-webkit-scrollbar-corner, .accord-contact-container::-webkit-scrollbar-corner, .chat-main::-webkit-scrollbar-corner, .seen-messages-screen--main::-webkit-scrollbar-corner {
+.left-col-list::-webkit-scrollbar-corner, .accord-contact-container::-webkit-scrollbar-corner, .chat-main::-webkit-scrollbar-corner, .seen-messages-screen--main::-webkit-scrollbar-corner, .resend-people-list::-webkit-scrollbar-corner{
     background: #fff;
 }
 
-.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container::-webkit-scrollbar-thumb, .chat-main::-webkit-scrollbar-thumb, .seen-messages-screen--main::-webkit-scrollbar-thumb {
+.left-col-list::-webkit-scrollbar-thumb, .accord-contact-container::-webkit-scrollbar-thumb, .chat-main::-webkit-scrollbar-thumb, .seen-messages-screen--main::-webkit-scrollbar-thumb, .resend-people-list::-webkit-scrollbar-thumb{
     background: rgba(51, 51, 51, 0.5);
     opacity: 0.3;
     border-radius: 1ex;

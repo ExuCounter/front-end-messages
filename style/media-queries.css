@@ -19,17 +19,11 @@
     }
 }
 
-@media screen and (max-width: 1200px){
-    .create-chat-btn{
-        max-width: 100%;
-    }
-}
-
 /* MEDIA 1128PX */
 
 @media screen and (max-width: 1128px){
     body{
-        overflow-y: auto !important;
+        overflow-y: auto;
     }
     html{
         font-size: 16px;
@@ -135,6 +129,9 @@
     }
     .chat .chat-heading-settings .edit-btn-sm{
         padding: 0.4rem 0.4rem;
+    }
+    .create-chat-btn{
+        max-width: 100%;
     }
 }
 
@@ -288,7 +285,7 @@
     }
     
     .create-chat-btn{
-        max-width: 100%;
+        max-width: 264px;
     }
     .chat .edit-message-btn p, .chat .delete-message-btn p{
         display: none;
@@ -315,6 +312,20 @@
     
     .chat .edit-btn-sm{
         padding: 0.3rem 0.5rem;
+    }
+    .custom-modal .modal-content{
+        padding: 1rem 2.55rem;
+    }
+    .resend-people-list button > div svg{
+        width: 2rem;
+        height: 2rem;
+    }
+    .resend-people-list .arrow-next {
+        width: 1rem;
+        height: 1rem;
+    }
+    .welcome-chat{
+        height: 100vh;
     }
 }
 
@@ -418,5 +429,19 @@
     }
     .cancel-btn{
         max-width: 264px;
+    }
+    .chat-heading.row{
+        height: 50px;
+    }
+    .chat-heading-edit.row{
+        height: 39px;
+    }
+}
+
+/* MAX-HEIGHT */
+
+@media screen and (min-height: 100px ) and (max-height: 640px){
+    body.overflow-hidden .resend-people-list{
+        max-height: 40vh;
     }
 }

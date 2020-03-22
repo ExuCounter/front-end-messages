@@ -17,7 +17,10 @@ let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     createChatButtons = document.querySelectorAll('.create-chat-btn'),
     finishCreateChatBtn = document.querySelector('.finish-create-chat--btn'),
     messageInfoButtons = document.querySelectorAll('.common-chat .message-info-icon'),
-    deleteMessageButtons = document.querySelectorAll('.delete-message-btn');
+    deleteMessageButtons = document.querySelectorAll('.delete-message-btn'),
+    closeModalBtn = document.querySelectorAll('.close-modal-btn'),
+    resendMessageButtons = document.querySelectorAll('.resend-message-btn'),
+    cancelHiglightButtons = document.querySelectorAll('.chat-heading-edit');
 
 let chatTabs = document.querySelectorAll('.chat-tab'),
     welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading'),
@@ -37,6 +40,8 @@ let testChatPrivate = document.querySelector('.chat-1'),
 
 let strangeMessages = document.querySelectorAll('.chat-main-message.strange-message');
 let yourMessages = document.querySelectorAll('.chat-main-message.your-message');
+
+let modals = document.querySelectorAll('.custom-modal');
 
 /* ЭКРАНЫ В ПРАВОЙ КОЛОНКЕ */
 
@@ -60,12 +65,13 @@ function openScreen(screens, index){
     activeScreen(screens, index);
 }
 
-openScreen(screens, 6);
+openScreen(screens, 0);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
+let counter = 0;
+
 function manageMessagesActivity(messages){
-    let counter = 0;
     messages.forEach((message)=>{
         message.addEventListener('click', ()=>{
             if(message.querySelector('input').checked === true && !(message.classList.contains('active'))){
@@ -120,7 +126,23 @@ function manageMessagesActivity(messages){
             counter = 0;
         });
     });
+
+    cancelHiglightButtons.forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+            btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
+            btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
+            screens.forEach((screen)=>{
+                screen.classList.remove('active');
+            })
+            btn.closest('.chat').classList.add('active');
+            counter = 0;
+    
+        })
+    })
 }
+
+
+/* Отменить выделение сообщений */
 
 manageMessagesActivity(strangeMessages);
 manageMessagesActivity(yourMessages);
@@ -260,7 +282,7 @@ chatTabs.forEach((item)=>{
 
 /* Для телефонов стартовый экран */
 
-if(document.documentElement.clientWidth < 768){
+if(document.documentElement.clientWidth < 767){
     chatLeftColumn.classList.remove('hide-screen');
     chatRightColumn.classList.add('hide-screen');
     chatTabs.forEach((item)=>{
@@ -311,6 +333,14 @@ createChatButtons.forEach((btn)=>{
     });
 })
 
+/* Закрытие модального окна */
+
+closeModalBtn.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        btn.closest('.custom-modal').classList.remove('active');
+    });
+});
+
 /* Листенер на кнопку "отменить создание чата" */
 
 cancelCreateChatButtons.forEach((btn)=>{
@@ -326,6 +356,14 @@ cancelCreateChatButtons.forEach((btn)=>{
 
 addUsersBtn.addEventListener('click', ()=>{
     activeScreen(screens, 3);
+});
+
+/* Кнопка для открытия "переслать" модального окна */
+
+resendMessageButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        document.querySelector('.modal-resend').classList.add('active');
+    });
 });
 
 /* Удалить сообщение в чате */
@@ -359,11 +397,9 @@ deleteMessageButtons.forEach((btn)=>{
     
 });
 
-//
-
  /* Наблюдатель за сменой классов */
 
- let observer = new MutationObserver(function(mutations) {
+ let observerClasses = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         for(let screen of screens){
             if(screen.classList.contains('active')){
@@ -376,10 +412,30 @@ deleteMessageButtons.forEach((btn)=>{
     });    
 });
 
+let observerModals = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        for(let modal of modals){
+            if(modal.classList.contains('active')){
+                document.body.classList.add('overflow-hidden');
+            }
+            else if(!(modal.classList.contains('active'))){
+                document.body.classList.remove('overflow-hidden');
+            }
+
+        };
+    });    
+});
+
 // настраиваем наблюдатель
 
 let config = { attributes: true, childList: true, characterData: true }
 
 for(let screen of screens){
-    observer.observe(screen, config);
+    observerClasses.observe(screen, config);
 };
+
+for(let modal of modals){
+    observerModals.observe(modal, config);
+};
+
+
