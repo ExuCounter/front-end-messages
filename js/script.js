@@ -134,6 +134,11 @@ function manageMessagesActivity(messages){
             screens.forEach((screen)=>{
                 screen.classList.remove('active');
             })
+            btn.closest('.chat').querySelectorAll('.chat-main-message').forEach((message)=>{
+                message.classList.remove('active');
+                message.classList.remove('disabled');
+                
+            });
             btn.closest('.chat').classList.add('active');
             counter = 0;
     
