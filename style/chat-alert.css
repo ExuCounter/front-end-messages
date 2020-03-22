@@ -1,0 +1,28 @@
+.chat-success-alert{
+    position: absolute;
+    background: #76CBC6;
+    color: #FFF;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.33rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    z-index: 111;
+    display: none;
+}
+
+.chat-success-alert.active{
+    display: flex;
+}
+
+.chat-success-alert button{
+    color: #FFF;
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    margin-left: 0.2rem;
+}

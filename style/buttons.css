@@ -190,17 +190,14 @@
     background-color: #F6544B;
 }
 
-.edit-btn-sm.edit-message-btn{
+.edit-btn-sm.blue-edit-message-btn{
     background: #76CBC6;
 }
 
-.edit-btn-sm.resend-message-btn{
-    background: #686F7F;
+.edit-btn-sm.gray-edit-message-btn{
+    background: #686F7F !important;
 }
 
-.edit-btn-sm.edit-message-btn{
-    border-radius: 3px;
-}
 
 .edit-btn-sm svg{
     margin-right: 0.22rem;
@@ -215,4 +212,16 @@
     border: none;
     background-color: transparent;
     outline: none;
+}
+
+.close-edit-textarea{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.send-messages-col.edit .close-edit-textarea{
+    display: block;
 }

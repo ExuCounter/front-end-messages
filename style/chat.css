@@ -1,5 +1,6 @@
 .chat-created, .private-chat, .common-chat, .seen-messages-screen, .common-chat-settings{
     display: none;
+    position: relative;
 }
 
 .chat.active, .private-chat.active, .common-chat.active, .seen-messages-screen.active, .common-chat-settings.active{
@@ -11,6 +12,10 @@
     overflow-x: hidden;
     height: 70vh;
 
+}
+
+.chat-container-main{
+    position: relative;
 }
 
 .chat .lg-heading{
@@ -94,6 +99,21 @@
 .chat-main-message .chat-message-text{
     font-size: 0.77rem;
     font-weight: 400;
+}
+
+.quoted-message-text{
+    font-size: 0.66rem;
+    font-weight: 300;
+    display: flex;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: solid 1px #CED3DD;
+}
+
+.quoted-message-text svg{
+    display: block;
+    margin-top: 5px;
+    margin-right: 7px;
 }
 
 .seen-message p{

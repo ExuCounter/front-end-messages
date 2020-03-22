@@ -23,7 +23,9 @@ let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     cancelHiglightButtons = document.querySelectorAll('.chat-heading-edit .cancel-create-btn'),
     deleteModalAgreeBtn = document.querySelector('.modal-delete .create-btn'),
     deleteModalCancelBtn = document.querySelector('.modal-delete .cancel-btn'),
-    deleteMessageModal = document.querySelector('.modal-delete');
+    editMessageButtons = document.querySelectorAll('.edit-message-btn'),
+    deleteMessageModal = document.querySelector('.modal-delete'),
+    closeEditTextareaButtons = document.getElementsByClassName('close-edit-textarea');
 
 let chatTabs = document.querySelectorAll('.chat-tab'),
     welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading'),
@@ -44,7 +46,8 @@ let testChatPrivate = document.querySelector('.chat-1'),
 let strangeMessages = document.querySelectorAll('.chat-main-message.strange-message');
 let yourMessages = document.querySelectorAll('.chat-main-message.your-message');
 
-let modals = document.querySelectorAll('.custom-modal');
+let modals = document.querySelectorAll('.custom-modal'),
+    chatSuccessDeleteAlert = document.querySelector('.chat-success-alert');
 
 /* ЭКРАНЫ В ПРАВОЙ КОЛОНКЕ */
 
@@ -68,7 +71,7 @@ let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScre
 //     activeScreen(screens, index);
 // }
 
-// openScreen(screens, 0);
+openScreen(screens, 6);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
@@ -106,7 +109,17 @@ function manageMessagesActivity(messages){
             if(counter >= 1){
                 message.closest('.chat').querySelector('.chat-heading-edit').classList.remove('active');
                 message.closest('.chat').querySelector('.chat-heading').classList.add('active');
-
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'flex';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'flex';
+                message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+            }
+            if(counter >= 2){
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
 
             if(counter == 0){
@@ -319,6 +332,73 @@ allContactsBtn.addEventListener('click', ()=>{
     }
 });
 
+/* Редактирование сообщения */
+
+editMessageButtons.forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        if(!(btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.contains('edit')) && btn.closest('.chat').querySelector('.chat-main-message.active .quoted-message-text')){
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.add('edit');
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message.active .quoted-message-answer').innerHTML}`;
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col').insertAdjacentHTML('afterbegin', `
+            <div>
+                <span class="quoted-message-text">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12.456C1.488 12.216 2.496 11.712 3.024 10.944C3.6 10.128 3.888 8.76 3.888 6.84H0.216V0H7.272V5.76C7.272 8.88 6.696 11.232 5.544 12.816C4.392 14.4 2.544 15.192 0 15.192V12.456ZM10.368 12.456C11.856 12.216 12.864 11.712 13.392 10.944C13.968 10.128 14.256 8.76 14.256 6.84H10.584V0H17.64V5.76C17.64 8.88 17.064 11.232 15.912 12.816C14.76 14.4 12.912 15.192 10.368 15.192V12.456Z" fill="#76CBC6"/>
+                    </svg>
+                    <span>  
+                    от Марта Шишко Сегодня в 18:22 из  группового чата<br>
+                    У нас планы, никак не сможем, в 10:30 у дочки модельное агенство, надеюсь на понима...   
+                    </span>                                        
+                </span>
+            </div> 
+            <svg class='close-edit-textarea' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 14.999L1.00086 1.00009" stroke="#F6544B" stroke-width="2" stroke-linecap="round"/>
+                <path d="M14.999 1L0.999877 14.9989" stroke="#F6544B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+                
+            `);
+        }
+        else if(!(btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.contains('edit'))){
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.add('edit');
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message.active .chat-message-text').innerHTML}`;
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col').insertAdjacentHTML('afterbegin', `
+            <div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1452 5.04924L15.0116 6.18284L12.1776 3.34533L13.3112 2.21172C13.5421 1.9808 13.9444 1.9808 14.1754 2.21172L16.1452 4.18504C16.3831 4.42296 16.3831 4.81132 16.1452 5.04924ZM6.67399 14.5309L3.83997 11.6934L11.1664 4.35648L14.0004 7.194L6.67399 14.5309ZM3.18571 13.0615L5.30597 15.1852L2.353 16.0179L3.18571 13.0615ZM17.1563 3.1739L15.1865 1.20058C14.8017 0.815716 13.4126 0.0879686 12.3035 1.20058L2.32149 11.1896C2.23402 11.2771 2.17104 11.382 2.13955 11.501L0.635075 16.8576C0.5651 17.1061 0.638574 17.372 0.817012 17.5574C0.998949 17.7428 1.36282 17.7743 1.51677 17.7393L6.86991 16.2314C6.98887 16.1999 7.09383 16.1369 7.1813 16.0494L17.1563 6.06039C17.9506 5.26617 17.9506 3.97162 17.1563 3.1739Z" fill="#282A2E"/>
+                </svg>  
+                <p class="sm-text">
+                    Режим редактирования
+                </p>
+            </div>
+            <svg class='close-edit-textarea' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 14.999L1.00086 1.00009" stroke="#F6544B" stroke-width="2" stroke-linecap="round"/>
+                <path d="M14.999 1L0.999877 14.9989" stroke="#F6544B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+                
+            `);
+        }
+        /* Закрытие редактирование сообщения */
+
+        for(let btn of closeEditTextareaButtons){
+            btn.addEventListener('click',()=>{
+                btn.closest('.chat').querySelector('.send-messages-col').classList.remove('edit');
+                btn.closest('.chat').querySelector('.send-messages-col div').outerHTML = '';
+                
+                btn.closest('.chat').querySelectorAll('.chat-main-message').forEach((message)=>{
+                    message.classList.remove('disabled');
+                    message.classList.remove('active');
+                });
+
+                btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = '';
+            })
+        }
+        
+    btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
+    btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
+
+    })
+})
+
 /* Листенеры на кнопки "Создать чат" */
 
 createChatButtons.forEach((btn)=>{
@@ -389,6 +469,8 @@ deleteMessageButtons.forEach((btn)=>{
                 message.classList.remove('disabled');
 
             });
+            chatSuccessDeleteAlert.classList.add('active');
+            setTimeout(()=>{chatSuccessDeleteAlert.classList.remove('active')},3000);
             deleteMessageModal.classList.remove('active')
             
          });
@@ -401,8 +483,7 @@ deleteMessageButtons.forEach((btn)=>{
                    message.classList.remove('disabled');
         
                });
-               deleteMessageModal.classList.remove('active')
-;
+               deleteMessageModal.classList.remove('active');
            })
            btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
            btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
@@ -452,5 +533,4 @@ for(let screen of screens){
 for(let modal of modals){
     observerModals.observe(modal, config);
 };
-
 

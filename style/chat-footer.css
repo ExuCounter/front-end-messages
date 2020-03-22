@@ -80,3 +80,38 @@
 .chat-footer textarea{
     overflow: hidden;
 }
+
+.chat-footer .send-messages-col.edit div{
+    display: flex;
+    align-items: center;
+    color: #282A2E;
+    padding-top: 0.35rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.66rem;
+    background-color: #FFF;
+    padding-bottom: 0.1rem;
+}
+
+.chat-footer .send-messages-col.edit{
+    padding: 1.5rem 0.5rem 0.35rem 1.57rem;
+    position: relative;
+}
+
+.chat-footer .send-messages-col.edit textarea{
+    padding-top: 1.5rem;
+}
+
+.chat-footer .send-messages-col div p{
+    margin-left: 0.3rem;
+    
+}
+
+.send-messages-col .quoted-message-text{
+    margin-top: 0px;
+    margin-bottom: -1rem;
+    background-color: #FFF;
+    position: relative;
+    top: 0;
+    border-bottom: solid 1px transparent;
+}
