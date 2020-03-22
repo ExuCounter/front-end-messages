@@ -113,7 +113,7 @@
         padding: 0rem 1.5rem 0rem 2.5rem;
     }
     .chat-main{
-        height: 100vh;
+        height: fit-content;
     }
     .common-chat-settings .chat-heading{
         margin: 0.6rem 0rem;
@@ -167,7 +167,7 @@
         margin-left: 0 !important;
     }
     .all-contacts-btn p{
-        font-size: 0.67rem;
+        font-size: 0.72rem;
     }
     .all-contacts h2{
         font-size: 1.1rem;
@@ -433,6 +433,9 @@
         height: auto !important;
         flex-direction: column;
         padding: 1rem 1.5rem 0.5rem 1.5rem;
+    }
+    .private-chat .private-chat-user {
+        padding: 0;
     }
 }
 
