@@ -41,6 +41,30 @@
     .seen-messages-screen--main{
         max-height: none;
     }
+    .modal-delete .modal-content .btn-container{
+        flex-direction: column;
+    }
+    .modal-delete .modal-content{
+        width: 90vmin;
+    }
+    .modal-delete .modal-content .btn-container div:nth-child(1){
+        padding: 0rem;
+        border-right: solid 1px transparent;
+    }
+    .modal-delete .modal-content .btn-container{
+        margin-top: 0rem;
+        padding-top: 1rem;
+    }
+    .modal-delete .modal-content h3{
+        text-align: center;
+    }
+    .modal-delete .modal-content .btn-container div:nth-child(2){
+        padding-left: 0rem;
+    }
+    .modal-delete .modal-content .btn-container div button{
+        margin: 0.5rem 0rem;
+        max-width: 100%;
+    }
 }
 
 /* MEDIA 992PX */
@@ -115,9 +139,6 @@
     .seen-messages-screen--main .col:nth-child(1),.seen-messages-screen--main .col:nth-child(2) {
         padding: 0rem 1.5rem 0rem 2.5rem;
     }
-    .chat-main{
-        height: fit-content;
-    }
     .common-chat-settings .chat-heading{
         margin: 0.6rem 0rem;
     }
@@ -135,6 +156,15 @@
     }
     .create-chat-btn{
         max-width: 100%;
+    }
+    .modal-delete .modal-content h3{
+        margin: 0rem;
+    }
+    .hide-screen{
+        display: none !important;
+    }
+    .chat-main{
+        height: 80vh;
     }
 }
 

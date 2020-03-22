@@ -20,7 +20,10 @@ let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     deleteMessageButtons = document.querySelectorAll('.delete-message-btn'),
     closeModalBtn = document.querySelectorAll('.close-modal-btn'),
     resendMessageButtons = document.querySelectorAll('.resend-message-btn'),
-    cancelHiglightButtons = document.querySelectorAll('.chat-heading-edit');
+    cancelHiglightButtons = document.querySelectorAll('.chat-heading-edit .cancel-create-btn'),
+    deleteModalAgreeBtn = document.querySelector('.modal-delete .create-btn'),
+    deleteModalCancelBtn = document.querySelector('.modal-delete .cancel-btn'),
+    deleteMessageModal = document.querySelector('.modal-delete');
 
 let chatTabs = document.querySelectorAll('.chat-tab'),
     welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading'),
@@ -59,13 +62,13 @@ let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScre
 
 /* Функция для открытия нужного экрана разработчикам */
 
-function openScreen(screens, index){
-    chatLeftColumn.classList.add('hide-screen');
-    chatRightColumn.classList.remove('hide-screen');
-    activeScreen(screens, index);
-}
+// function openScreen(screens, index){
+//     chatLeftColumn.classList.add('hide-screen');
+//     chatRightColumn.classList.remove('hide-screen');
+//     activeScreen(screens, index);
+// }
 
-openScreen(screens, 0);
+// openScreen(screens, 0);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
@@ -129,8 +132,6 @@ function manageMessagesActivity(messages){
 
     cancelHiglightButtons.forEach((btn)=>{
         btn.addEventListener('click', ()=>{
-            btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
-            btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
             screens.forEach((screen)=>{
                 screen.classList.remove('active');
             })
@@ -287,7 +288,7 @@ chatTabs.forEach((item)=>{
 
 /* Для телефонов стартовый экран */
 
-if(document.documentElement.clientWidth < 767){
+if(document.documentElement.clientWidth < 993){
     chatLeftColumn.classList.remove('hide-screen');
     chatRightColumn.classList.add('hide-screen');
     chatTabs.forEach((item)=>{
@@ -375,30 +376,39 @@ resendMessageButtons.forEach((btn)=>{
 
 deleteMessageButtons.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
-        strangeMessages = document.querySelectorAll('.chat-main-message.strange-message');
-        yourMessages = document.querySelectorAll('.chat-main-message.your-message');
+        deleteMessageModal.classList.add('active');
+        deleteModalAgreeBtn.addEventListener('click', ()=>{
+            messages = btn.closest('.chat').querySelectorAll('.chat-main-message');
 
-        yourMessages.forEach((message)=>{
+            messages.forEach((message)=>{
             
-            if(message.classList.contains('active')){
-                message.outerHTML = '';
-            }
-            message.classList.remove('active');
-            message.classList.remove('disabled');
-
-        });
-        strangeMessages.forEach((message)=>{
-            if(message.classList.contains('active')){
-                message.outerHTML = '';
-            }
-            message.classList.remove('active');
+                if(message.classList.contains('active')){
+                    message.outerHTML = '';
+                }
+                message.classList.remove('active');
                 message.classList.remove('disabled');
-    
-        });
-        btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
-        btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
 
-        });
+            });
+            deleteMessageModal.classList.remove('active')
+            
+         });
+            deleteModalCancelBtn.addEventListener('click', ()=>{
+            messages = btn.closest('.chat').querySelectorAll('.chat-main-message');
+
+               messages.forEach((message)=>{
+               
+                   message.classList.remove('active');
+                   message.classList.remove('disabled');
+        
+               });
+               deleteMessageModal.classList.remove('active')
+;
+           })
+           btn.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
+           btn.closest('.chat').querySelector('.chat-heading').classList.remove('active');
+    });
+
+
     
 });
 
