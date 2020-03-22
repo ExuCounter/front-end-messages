@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 992px){
     html{
-        font-size: 15px;
+        font-size: 28px;
     }
     .welcome-chat{
         padding: 0em 0.25rem;
@@ -139,7 +139,10 @@
 
 @media screen and (max-width: 768px){
     html{
-        font-size: 15px;
+        font-size: 27px;
+    }
+    .create-chat-btn{
+        max-width: 100%;
     }
     .welcome-chat{
         padding: 0em 0.25em;
@@ -283,10 +286,6 @@
     .edit-btn-sm{
         padding: 0.4rem 0.8rem;
     }
-    
-    .create-chat-btn{
-        max-width: 264px;
-    }
     .chat .edit-message-btn p, .chat .delete-message-btn p{
         display: none;
     }
@@ -332,6 +331,9 @@
 /* MEDIA 568PX */
 
 @media screen and (max-width: 568px){
+    html{
+        font-size: 22px;
+    }
     .welcome-chat{
         padding: 0em 1.5rem;
         margin-top: 3.5rem;
@@ -415,7 +417,7 @@
 
 @media screen and (max-width: 480px){
     html{
-        font-size: 12px;
+        font-size: 17px;
     }
     .new-chat.add-users{
         padding: 0em 0.44em 1.12em 0.48em;
