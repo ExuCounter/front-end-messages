@@ -117,31 +117,31 @@ function manageMessagesActivity(messages){
 
             message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
 
-            if(counterYourMessages == 1 && counterStrangeMessages == 0){
+            if(counterYourMessages == 0 && counterStrangeMessages == 1){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
-            else if(counterYourMessages > 1 && counterStrangeMessages == 0){
+            else if(counterYourMessages > 0 && counterStrangeMessages == 1){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
-                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'flex';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
-            else if(counterYourMessages == 0 && counterStrangeMessages == 1 && message.closest('.chat').classList.contains('common-chat')){
+            else if(counterYourMessages == 1 && counterStrangeMessages == 0 && message.closest('.chat').classList.contains('common-chat')){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'flex';
             }
-            else if(counterYourMessages == 0 && counterStrangeMessages == 1 && !(message.closest('.chat').classList.contains('common-chat'))){
+            else if(counterYourMessages == 1 && counterStrangeMessages == 0 && !(message.closest('.chat').classList.contains('common-chat'))){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
-            else if(counterYourMessages == 1 && counterStrangeMessages == 0){
+            else if(counterYourMessages == 0 && counterStrangeMessages == 1){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'flex';
@@ -149,12 +149,13 @@ function manageMessagesActivity(messages){
             
             }
             else if(counterYourMessages >= 1 && counterStrangeMessages >=1 ){
+                alert(true);
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
-            else if(counterStrangeMessages >= 2 ){
+            else if(counterYourMessages >= 2 ){
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
             }
 
@@ -385,7 +386,7 @@ editMessageButtons.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
         if(!(btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.contains('edit')) && btn.closest('.chat').querySelector('.chat-main-message.active .quoted-message-text')){
             btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.add('edit');
-            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message.active .quoted-message-answer').innerHTML}`;
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message label.active .quoted-message-answer').innerHTML}`;
             btn.closest('.chat').querySelector('.chat-footer .send-messages-col').insertAdjacentHTML('afterbegin', `
             <div>
                 <span class="quoted-message-text">
@@ -407,7 +408,7 @@ editMessageButtons.forEach((btn)=>{
         }
         else if(!(btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.contains('edit'))){
             btn.closest('.chat').querySelector('.chat-footer .send-messages-col').classList.add('edit');
-            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message.active .chat-message-text').innerHTML}`;
+            btn.closest('.chat').querySelector('.chat-footer .send-messages-col textarea').value = `${btn.closest('.chat').querySelector('.chat-main-message label.active .chat-message-text').innerHTML}`;
             btn.closest('.chat').querySelector('.chat-footer .send-messages-col').insertAdjacentHTML('afterbegin', `
             <div>
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
