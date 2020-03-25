@@ -47,8 +47,8 @@ let contactHeadCheckBoxes = document.querySelectorAll('.contact-head-label input
 let testChatPrivate = document.querySelector('.chat-1'),
     testChatCommon = document.querySelector('.chat-2');
 
-let strangeMessages = document.querySelectorAll('.chat-main-message.strange-message');
-let yourMessages = document.querySelectorAll('.chat-main-message.your-message');
+let strangeMessages = document.querySelectorAll('.chat-main-message.strange-message label');
+let yourMessages = document.querySelectorAll('.chat-main-message.your-message label');
 
 let modals = document.querySelectorAll('.custom-modal'),
     chatSuccessDeleteAlert = document.querySelector('.chat-success-alert'),
@@ -76,11 +76,12 @@ function openScreen(screens, index){
     activeScreen(screens, index);
 }
 
-// openScreen(screens, 6);
+openScreen(screens, 5);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
-let counter = 0;
+let counterYourMessages = 0,
+    counterStrangeMessages = 0;
 
 function manageMessagesActivity(messages){
     messages.forEach((message)=>{
@@ -93,58 +94,87 @@ function manageMessagesActivity(messages){
                 message.classList.remove('active');
                 message.classList.add('disabled');
             }
-            message.closest('.chat').querySelectorAll('.chat-main-message.strange-message').forEach((message)=>{
+            message.closest('.chat').querySelectorAll('.chat-main-message.strange-message label').forEach((message)=>{
                 if(!(message.classList.contains('active'))){
                     message.classList.add('disabled');
                 }
                 if(message.classList.contains('active')){
-                    counter++;
+                    counterStrangeMessages++;
                 }
             });
     
-            message.closest('.chat').querySelectorAll('.chat-main-message.your-message').forEach((message)=>{
+            message.closest('.chat').querySelectorAll('.chat-main-message.your-message label').forEach((message)=>{
                 if(!(message.classList.contains('active'))){
                      message.classList.add('disabled');
                 }
                 if(message.classList.contains('active')){
-                    counter++;
+                    counterYourMessages++;
                 }
             });
-
-            if(counter >= 1){
-                message.closest('.chat').querySelector('.chat-heading-edit').classList.remove('active');
-                message.closest('.chat').querySelector('.chat-heading').classList.add('active');
+            
+            message.closest('.chat').querySelector('.chat-heading-edit').classList.remove('active');
+            message.closest('.chat').querySelector('.chat-heading').classList.add('active');
+            if(counterStrangeMessages >= 1 || counterYourMessages >=1){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
             }
-            if(counter >= 2){
+            if((counterStrangeMessages >= 1 && counterYourMessages >=1) || counterYourMessages >=2 || counterStrangeMessages >= 2){
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.resend-message-btn').style.display = 'none';
+            }
+            if(counterStrangeMessages == 1 && counterYourMessages == 0 && message.closest('.chat').classList.contains('private-chat')){
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
+            }
+            if(counterStrangeMessages == 1 && counterYourMessages == 1){
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'flex';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+            }
+            if(counterStrangeMessages == 0 && counterYourMessages >= 2){
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
+            }
+            if((counterStrangeMessages == 1 && counterYourMessages > 1) || (counterStrangeMessages > 1 && counterYourMessages == 1) || counterStrangeMessages > 1 && counterYourMessages > 1){
+                message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.answer-message-btn').style.display = 'none';
+                message.closest('.chat').querySelector('.resend-message-btn').style.display = 'flex';
             }
 
-            if(counter == 0){
+            if(counterStrangeMessages == 0 && counterYourMessages == 0){
                 message.closest('.chat').querySelector('.chat-heading-edit').classList.add('active');
                 message.closest('.chat').querySelector('.chat-heading').classList.remove('active');
-                message.closest('.chat').querySelectorAll('.chat-main-message.strange-message').forEach((message)=>{
+                message.closest('.chat').querySelectorAll('.chat-main-message.strange-message label').forEach((message)=>{
                     if(!(message.classList.contains('active'))){
                         message.classList.remove('active');
                         message.classList.remove('disabled');
                     }
                 });
         
-                message.closest('.chat').querySelectorAll('.chat-main-message.your-message').forEach((message)=>{
+                message.closest('.chat').querySelectorAll('.chat-main-message.your-message label').forEach((message)=>{
                     if(!(message.classList.contains('active'))){
                         message.classList.remove('active');
                         message.classList.remove('disabled');
                     }
                 });
             }
-            counter = 0;
+            counterStrangeMessages = 0;
+            counterYourMessages = 0;
         });
     });
 
@@ -159,7 +189,8 @@ function manageMessagesActivity(messages){
                 
             });
             btn.closest('.chat').classList.add('active');
-            counter = 0;
+            counterStrangeMessages = 0;
+            counterYourMessages = 0;
     
         })
     })

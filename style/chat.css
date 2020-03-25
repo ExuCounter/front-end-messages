@@ -65,7 +65,7 @@
 }
 
 .chat-main-message.your-message .seen-message{
-    order: 0;
+    order: -1;
     align-self: center;
     text-align: center;
     margin-right: 0.72rem;
@@ -345,11 +345,11 @@
     margin-right: 0.75rem;
 }
 
-.chat .chat-main-message.active .chat-message-text{
+.chat .chat-main-message label.active .chat-message-text{
     background-color: #E4EEEF;
 }
 
-.chat .chat-main-message.disabled .chat-message-text{
+.chat .chat-main-message label.disabled .chat-message-text{
     background-color: #E4EEEF;
     opacity: 0.35;
 }
@@ -452,4 +452,28 @@
 
 .left-col-list .left-col-message:last-child{
     padding-bottom: 30px;
+}
+
+.img-attached{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.img-attached img{
+    border-radius: 6px;
+}
+
+.img-attached__paragraph{
+    color: #4E5564;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.img-attached-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
 }
