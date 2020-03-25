@@ -1,6 +1,5 @@
-.chat-success-alert{
+.chat-alert{
     position: absolute;
-    background: #76CBC6;
     color: #FFF;
     right: 0;
     width: 100%;
@@ -14,11 +13,19 @@
     display: none;
 }
 
-.chat-success-alert.active{
+.chat-success-alert{
+    background: #76CBC6;
+}
+
+.chat-delete-alert{
+    background: #EC5252;
+}
+
+.chat-alert.active{
     display: flex;
 }
 
-.chat-success-alert button{
+.chat-alert button{
     color: #FFF;
     text-decoration: underline;
     border: none;

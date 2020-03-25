@@ -111,3 +111,17 @@
 .resend-people-list .arrow-next{
     margin-right: 1.2rem;
 }
+
+.modal-private-chat-delete .create-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-private-chat-delete .modal-content .btn-container div:nth-child(1){
+    padding-right: 0rem;
+    border-right: solid 1px transparent;
+}
+
+.modal-private-chat-delete .modal-content h3{
+    text-align: center;
+}

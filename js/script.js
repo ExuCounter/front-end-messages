@@ -6,7 +6,8 @@ let welcomeChatScreen = document.querySelector('.welcome-chat'),
     commonChatScreen = document.querySelector('.common-chat'),
     seenMessagesScreen = document.querySelector('.seen-messages-screen'),
     newChatScreen = document.querySelector('.new-chat-start'),
-    addUsersScreen = document.querySelector('.add-users');
+    addUsersScreen = document.querySelector('.add-users'),
+    editChatScreen = document.querySelector('.edit-chat');
 
 let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     allContactsBtn = document.querySelector('.all-contacts-btn'),
@@ -25,7 +26,8 @@ let cancelCreateChatButtons = document.querySelectorAll('.cancel-chat-btn'),
     deleteModalCancelBtn = document.querySelector('.modal-delete .cancel-btn'),
     editMessageButtons = document.querySelectorAll('.edit-message-btn'),
     deleteMessageModal = document.querySelector('.modal-delete'),
-    closeEditTextareaButtons = document.getElementsByClassName('close-edit-textarea');
+    closeEditTextareaButtons = document.getElementsByClassName('close-edit-textarea'),
+    chatHeadingDeleteButtons = document.querySelectorAll('.chat-heading-delete .chat-heading-btn');
 
 let chatTabs = document.querySelectorAll('.chat-tab'),
     welcomeChatHeading = document.querySelector('.welcome-chat .lg-heading'),
@@ -35,7 +37,9 @@ let chatTabs = document.querySelectorAll('.chat-tab'),
     chatLeftColumn = document.querySelector('.chat-left-col'),
     sendMessageCol = document.querySelector('.send-messages-col'),
     chatFooterSubmitCol = document.querySelector('.submit-col'),
-    leftColMessages = document.querySelectorAll('.left-col-message');
+    leftColMessages = document.querySelectorAll('.left-col-message'),
+    commonChatEditButtons = document.querySelectorAll('.chat-heading-edit-col .chat-heading-btn'),
+    leftColList = document.querySelector('.left-col-list');
 
 let contactHeadCheckBoxes = document.querySelectorAll('.contact-head-label input'),
     contactHeadSubCheckBoxes = document.querySelectorAll('.parent-checkbox-sub input');
@@ -47,11 +51,12 @@ let strangeMessages = document.querySelectorAll('.chat-main-message.strange-mess
 let yourMessages = document.querySelectorAll('.chat-main-message.your-message');
 
 let modals = document.querySelectorAll('.custom-modal'),
-    chatSuccessDeleteAlert = document.querySelector('.chat-success-alert');
+    chatSuccessDeleteAlert = document.querySelector('.chat-success-alert'),
+    chatDeleteAlert = document.querySelector('.chat-delete-alert');
 
 /* ЭКРАНЫ В ПРАВОЙ КОЛОНКЕ */
 
-let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen, seenMessagesScreen, commonChatSettingsScreen];
+let screens = [welcomeChatScreen, allContactsScreen, newChatScreen, addUsersScreen, chatScreen, privateScreen, commonChatScreen, seenMessagesScreen, commonChatSettingsScreen, editChatScreen];
 
 /* Функция для отключения всех экранов,
    кроме одного по индексу */
@@ -160,6 +165,15 @@ function manageMessagesActivity(messages){
     })
 }
 
+commonChatEditButtons.forEach((item)=>{
+    item.addEventListener('click',()=>{
+        activeScreen(screens, 9);
+    });
+})
+
+editChatScreen.querySelector('.create-btn').addEventListener('click', ()=>{
+    activeScreen(screens, 0);
+})
 
 /* Отменить выделение сообщений */
 
@@ -452,7 +466,38 @@ resendMessageButtons.forEach((btn)=>{
     });
 });
 
+chatHeadingDeleteButtons.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        if(item.closest('.chat').classList.contains('common-chat')){
+            document.body.querySelector('.modal-common-chat-delete').classList.add('active');
+            document.body.querySelector('.modal-common-chat-delete .create-btn').addEventListener('click', ()=>{
+                document.body.querySelector('.modal-common-chat-delete').classList.remove('active');
+                activeScreen(screens, 0);
+                chatDeleteAlert.classList.add('active');
+                setTimeout(()=>{chatDeleteAlert.classList.remove('active')}, 3000);
+            });
+            document.body.querySelector('.modal-common-chat-delete .cancel-btn').addEventListener('click', ()=>{
+                document.body.querySelector('.modal-common-chat-delete').classList.remove('active');
+                chatDeleteAlert.classList.add('active')
+                activeScreen(screens, 0);
+                setTimeout(()=>{chatDeleteAlert.classList.remove('active')}, 3000);
+            });
+        }
+        else if(item.closest('.chat').classList.contains('private-chat')){
+            document.body.querySelector('.modal-private-chat-delete').classList.add('active');
+            document.body.querySelector('.modal-private-chat-delete .create-btn').addEventListener('click', ()=>{
+                document.body.querySelector('.modal-private-chat-delete').classList.remove('active');
+                activeScreen(screens, 0);
+                chatDeleteAlert.classList.add('active');
+                setTimeout(()=>{chatDeleteAlert.classList.remove('active')}, 3000);
+            });
+        }
+    
+    });    
+});
+
 /* Удалить сообщение в чате */
+
 
 deleteMessageButtons.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
@@ -474,6 +519,7 @@ deleteMessageButtons.forEach((btn)=>{
             deleteMessageModal.classList.remove('active')
             
          });
+         
             deleteModalCancelBtn.addEventListener('click', ()=>{
             messages = btn.closest('.chat').querySelectorAll('.chat-main-message');
 
@@ -522,6 +568,7 @@ let observerModals = new MutationObserver(function(mutations) {
     });    
 });
 
+
 // настраиваем наблюдатель
 
 let config = { attributes: true, childList: true, characterData: true }
@@ -533,4 +580,5 @@ for(let screen of screens){
 for(let modal of modals){
     observerModals.observe(modal, config);
 };
+
 

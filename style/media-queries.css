@@ -17,6 +17,9 @@
     .add-users .accord-contact-container {
         height: 38vh;
     }
+    .edit-chat .accord-contact-container{
+        height: 50vh;
+    }
 }
 
 /* MEDIA 1128PX */
@@ -367,6 +370,13 @@
     .chat-footer .send-messages-col.edit textarea {
         padding-top: 0.75rem !important;
     }
+    .edit-chat .accord-contact-container{
+        flex-direction: column;
+    }
+    .edit-chat .accord-contact-container{
+        height: fit-content;
+    }
+    
 }
 
 /* MEDIA 568PX */
@@ -410,9 +420,6 @@
     }
     .add-users .accord-contact-container {
         margin-right: 0rem;
-    }
-    .add-users .accord-contact-container {
-        height: 45vh;
     }
     body{
         background-color: #FFF;
@@ -477,6 +484,9 @@
     }
     .private-chat .private-chat-user {
         padding: 0;
+    }
+    .left-col-list .left-col-message:last-child{
+        padding-bottom: 10px;
     }
 }
 

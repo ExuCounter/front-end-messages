@@ -418,3 +418,38 @@
 .private-chat .private-chat-info a:first-child{
     margin-right: 0.4rem;
 }
+
+.edit-chat .new-chat-input--container{
+    width: 100%;
+}
+
+.edit-chat .new-chat-input--container input{
+    width: 100%;
+}
+
+.edit-chat .accord-contact-container{
+    display: flex;
+}
+
+.edit-chat .add-users-search h3{
+    white-space: nowrap;
+}
+
+.edit-chat .accord-contact-container{
+    overflow-x: hidden;
+}
+
+.edit-chat .accord-contact {
+    max-width: 21rem;
+}
+
+.left-col-list{
+    flex-direction: column;
+    overflow-y: scroll;
+    height: -webkit-fill-available;
+    display: flex;
+}
+
+.left-col-list .left-col-message:last-child{
+    padding-bottom: 30px;
+}

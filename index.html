@@ -42,8 +42,12 @@
         </div>
         <div class="chat-container-main row">
             <!-- CHAT SUCCESS DELETE MESSAGES -->
-            <div class='chat-success-alert col-xs-12'>
+            <div class='chat-success-alert chat-alert chat-delete-alert col-xs-12'>
                 Сообщения были удалены -<button> отменить
+                </button>
+            </div>
+            <div class='chat-delete-alert chat-alert col-xs-12'>
+                Сообщения были удалены - <button> отменить
                 </button>
             </div>
             <div class="col-xs-12 col-md-3 chat-left-col chat-main-col">
@@ -2278,6 +2282,807 @@
                     </div>
                 </div>
 
+                <!-- EDIT CHAT -->
+                <div class="new-chat add-users edit-chat mobile-full-height">
+                    <div class="new-chat-heading">
+                        <label class="new-chat-input--container">
+                            <input type="search" placeholder="Новый чат" class='new-search-input default-text'>
+                        </label>
+                    </div>
+                    <div class="accord-contact-container">
+                        <div class="accord-contact">
+                            <div class='add-users-search'>
+                                <h3>Текущие участники чата</h3>
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='admins-contacts-ac' checked />
+                                <label for="admins-contacts-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Администраторы</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container">
+                                    <div class="accord-description">
+                                        <div class="parent-checkbox">
+                                            <label class="checkbox-container">
+                                                <span class='parent'>Анна Дмитриева</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-2-ac' checked />
+                                <label for="group-2-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Аннушка группа</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-3-ac' />
+                                <label for="group-3-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Ваннушка</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все педагоги</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="accord-description">
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Михаил Протасов</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-4-ac' />
+                                <label for="group-4-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Ганнушка</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все педагоги</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="accord-description">
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Михаил Протасов</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                        <div class="accord-contact">
+                            <div class='add-users-search'>
+                                <h3>Добавление участников чата</h3>
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='admins-contacts-ac' checked />
+                                <label for="admins-contacts-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Администраторы группа 1</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container">
+                                    <div class="accord-description">
+                                        <div class="parent-checkbox">
+                                            <label class="checkbox-container">
+                                                <span class='parent'>Анна Дмитриева</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-2-ac' checked />
+                                <label for="group-2-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Аннушка группа</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-3-ac' />
+                                <label for="group-3-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Ваннушка</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все педагоги</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="accord-description">
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Михаил Протасов</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="accord-contact-head">
+                                <input type="checkbox" id='group-4-ac' />
+                                <label for="group-4-ac" class='contact-head-label'>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="type md-text">Ганнушка</span>
+                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0C0.523309 0 0.0771419 1.07714 0.707107 1.70711L5.79289 6.79289C6.18342 7.18342 6.81658 7.18342 7.20711 6.79289L12.2929 1.70711C12.9229 1.07714 12.4767 0 11.5858 0L1.41421 0Z" fill="#282A2E"/>
+                                    </svg>          
+                                </label>     
+                                <div class="accord-description-container sub-description">
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все родители</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class='accord-description-group'>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="accord-description">
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Анна Дмитриева</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Алина Паш, дети</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="parent-checkbox">
+                                                    <label class="checkbox-container">
+                                                        <span class='parent'>Михаил Протасов</span>
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-group">
+                                        <div class="parent-checkbox parent-checkbox-sub">
+                                            <label class="checkbox-container">
+                                                <span class='parent all-parents-check'>Все педагоги</span>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="accord-description">
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Анна Дмитриева</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="parent-checkbox">
+                                                <label class="checkbox-container">
+                                                    <span class='parent'>Михаил Протасов</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-buttons-container">
+                        <button class="create-btn finish-create-chat--btn">
+                            Добавить участников
+                        </button>
+                        <button class="cancel-chat-btn cancel-btn">
+                            Отмена
+                        </button>
+                     </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -2536,6 +3341,51 @@
                 <div>
                     <button class="cancel-btn">
                         Отмена
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL MODAL-CHAT-DELETE-->
+
+    <div class="custom-modal modal-common-chat-delete modal-delete">
+        <div class="modal-content">
+            <button class="close-modal-btn">
+                <svg width="1.2rem" height="1.2rem" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L1.00028 20.9998M1 1.00016L20.9997 21" stroke="#495A5B" stroke-linecap="round"/>
+                    </svg>                    
+            </button>
+            <h3>Вы хотите удалить чат "Чат 3-й группы Зайчата"</h3>
+            <div class='btn-container'>
+                <div>
+                    <button class="create-btn">
+                        Удалить только у меня
+                    </button>
+                </div>
+                <div>
+                    <button class="cancel-btn">
+                        Удалить у всех участников
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL MODAL-CHAT-DELETE-->
+
+    <div class="custom-modal modal-private-chat-delete modal-delete">
+        <div class="modal-content">
+            <button class="close-modal-btn">
+                <svg width="1.2rem" height="1.2rem" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L1.00028 20.9998M1 1.00016L20.9997 21" stroke="#495A5B" stroke-linecap="round"/>
+                    </svg>                    
+            </button>
+            <h3>Вы хотите удалить чат историю личного чата<br> с Анна Карлова?</h3>
+            <div class='btn-container'>
+                <div class='d-flex create-btn-container'>
+                    <button class="create-btn">
+                        Удалить только у меня
                     </button>
                 </div>
             </div>
