@@ -149,7 +149,6 @@ function manageMessagesActivity(messages){
             
             }
             else if(counterYourMessages >= 1 && counterStrangeMessages >=1 ){
-                alert(true);
                 message.closest('.chat').querySelector('.edit-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.delete-message-btn').style.display = 'none';
                 message.closest('.chat').querySelector('.quote-message-btn').style.display = 'none';
