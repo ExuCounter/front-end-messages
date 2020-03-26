@@ -45,7 +45,7 @@
   .toggle-checkbox-container .checkmark:before {
     content: "";
     position: absolute;
-    background-image: url('/img/close.svg');
+    background-image: url('../img/close.svg');
     right: 5px;
     top: 6px;
     width: 7px;

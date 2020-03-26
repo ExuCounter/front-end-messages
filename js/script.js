@@ -220,6 +220,19 @@ pushSettingsBtn.addEventListener('click', ()=>{
     activeScreen(screens, 0);
 })
 
+leftColList.querySelectorAll('li').forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        allContactsBtn.classList.remove('active');
+    });
+})
+
+allContactsBtn.addEventListener('click', ()=>{
+    leftColList.querySelectorAll('li').forEach((item)=>{
+        item.classList.remove('active');
+    })
+})
+
+
 /* Открыть настройки общего чата */
 
 chatSettingsButtons.forEach((btn)=>{
@@ -378,6 +391,8 @@ allContactsBtn.addEventListener('click', ()=>{
         
     }
 });
+
+
 
 /* Редактирование сообщения */
 
