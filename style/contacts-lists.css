@@ -236,3 +236,79 @@
 .add-users .parent-checkbox .parent{
     padding-top: 0.15rem;
 }
+
+.all-contacts .accord-contact-head label{
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.all-contacts .accord-contact-head input:checked ~ .accord-contact-head .accord-description{
+    height: 4rem;
+    opacity: 1;
+
+}
+
+.edit-chat .accord-contact-container{
+    position: relative;
+}
+
+.edit-chat .accord-contact-container .accord-contact{
+    padding-bottom: 80px;
+}
+
+.edit-chat .accord-contact:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #FFF);
+    z-index: 1;
+}
+
+.add-users .settings-buttons-container{
+    position: relative;
+}
+
+.add-users .accord-contact{
+    padding-bottom: 40px;
+}
+
+.add-users .settings-buttons-container:before{
+    content: '';
+    position: absolute;
+    top: -80px;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #FFF);
+    z-index: 111;
+}
+
+.new-chat-input--container{
+    position: relative;
+}
+
+.new-chat-input--container__placeholder{
+    content: 'Новый чат';
+    font-size: 0.77rem;
+    color: #282A2E;
+    top: 50%;
+    transform: translate(0%, -50%);
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+    font-weight: 400;
+    transition: 0.15s ease-in-out;
+}
+
+.new-chat-input--container input:focus ~ .new-chat-input--container__placeholder{
+    position: absolute;
+    top: -0.1rem;
+    font-weight: 400;
+    left: 1rem;
+    font-size: 0.67rem;
+    padding: 0rem 0.225rem;
+    background-color: #FFF;
+    color: #363945;
+}

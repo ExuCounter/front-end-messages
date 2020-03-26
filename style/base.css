@@ -63,6 +63,21 @@ h3{
     background-color: #FFF;
 }
 
+.search-container{
+    position: relative;
+}
+
+.search-container input{
+    outline: none;
+}
+
+.search-container-close__btn{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
 /* SCROLLBARS */
 
 .left-col-list::-webkit-scrollbar, .edit-chat .accord-contact-container .accord-contact::-webkit-scrollbar, .accord-contact-container::-webkit-scrollbar, .chat-main::-webkit-scrollbar, .seen-messages-screen--main::-webkit-scrollbar, .resend-people-list::-webkit-scrollbar  {

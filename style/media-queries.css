@@ -20,6 +20,9 @@
     .edit-chat .accord-contact-container {
         height: 48vh;
     }
+    .accord-contact-container .accord-contact{
+        padding-bottom: 120px;
+    }
 }
 
 /* MEDIA 1128PX */

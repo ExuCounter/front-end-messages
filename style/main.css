@@ -146,18 +146,6 @@
     outline: none;
 }
 
-.new-chat-input--container:after{
-    content: 'Название чата';
-    position: absolute;
-    top: -0.55rem;
-    font-weight: 400;
-    left: 1rem;
-    font-size: 0.67rem;
-    padding: 0rem 0.225rem;
-    background-color: #FFF;
-    color: #363945;
-}
-
 .new-chat-main{
     margin-top: 7.94rem;
 }
