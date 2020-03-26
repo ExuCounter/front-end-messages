@@ -17,8 +17,8 @@
     .add-users .accord-contact-container {
         height: 38vh;
     }
-    .edit-chat .accord-contact-container{
-        height: 50vh;
+    .edit-chat .accord-contact-container {
+        height: 48vh;
     }
 }
 
@@ -168,6 +168,13 @@
     }
     .chat-main{
         height: 80vh;
+    }
+    .edit-chat .accord-contact-container .accord-contact{
+        height: fit-content;
+        overflow: hidden;
+    }
+    .left-col-list:before{
+        display: none;
     }
 }
 
@@ -376,6 +383,9 @@
     .edit-chat .accord-contact-container{
         height: fit-content;
     }
+    .chat-main .chat-main-message:last-child{
+        padding-bottom: 60px;
+    }
     
 }
 
@@ -488,6 +498,7 @@
     .left-col-list .left-col-message:last-child{
         padding-bottom: 10px;
     }
+    
 }
 
 /* MEDIA 480PX */

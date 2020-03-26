@@ -10,7 +10,7 @@
 .chat-main{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 70vh;
+    height: 73vh;
 
 }
 
@@ -446,7 +446,7 @@
 .left-col-list{
     flex-direction: column;
     overflow-y: scroll;
-    height: -webkit-fill-available;
+    height: 530px;
     display: flex;
 }
 
@@ -476,4 +476,35 @@
     display: flex;
     flex-direction: column;
     padding-left: 10px;
+}
+
+.left-col-list:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 160px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #FFF);
+    z-index: 1;
+
+}
+
+.edit-chat .accord-contact-container .accord-contact{
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.edit-chat .accord-contact-container .accord-contact:nth-child(1){
+    margin-right: 25px;
+}
+
+.edit-chat .accord-contact-container{
+    height: auto;
+    overflow: hidden;
+}
+
+.chat-main .chat-main-message:last-child{
+    padding-bottom: 100px;
 }

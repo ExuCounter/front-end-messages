@@ -76,7 +76,7 @@ function openScreen(screens, index){
     activeScreen(screens, index);
 }
 
-openScreen(screens, 5);
+openScreen(screens, 0);
 
 /* СООБЩЕНИЯ И УПРАВЛЕНИЕ ИХ ЧЕКБОКСАМИ */
 
@@ -614,4 +614,32 @@ for(let modal of modals){
     observerModals.observe(modal, config);
 };
 
+window.addEventListener('resize', ()=>{
+    if(document.documentElement.clientWidth > 992){
+        let heightChat = document.documentElement.clientHeight - 30;
+        let leftChatColHeader = document.querySelector('.left-col-header').offsetHeight;
+        let chatContainerTabs = document.querySelector('.chat-container-tabs').offsetHeight;
+        let chatHeading = document.querySelector('.chat-heading').offsetHeight;
+        let subHeading = document.querySelector('.chat-sub-heading').offsetHeight;
+        let chatMainHeight = heightChat - chatContainerTabs - chatHeading - subHeading;
+        let leftColHeight = heightChat - chatContainerTabs - leftChatColHeader -allContactsBtn.offsetHeight - 30;
+        document.querySelector('.left-col-list').style.height = `${leftColHeight}px`;
+        document.querySelectorAll('.chat-main').forEach((item)=>{
+            item.style.height = `${chatMainHeight-100}px`;
+        })
+    }
+});
 
+if(document.documentElement.clientWidth > 992){
+    let heightChat = document.documentElement.clientHeight - 40;
+    let leftChatColHeader = document.querySelector('.left-col-header').offsetHeight;
+    let chatContainerTabs = document.querySelector('.chat-container-tabs').offsetHeight;
+    let chatHeading = document.querySelector('.chat-heading').offsetHeight;
+    let subHeading = document.querySelector('.chat-sub-heading').offsetHeight;
+    let chatMainHeight = heightChat - chatContainerTabs - chatHeading - subHeading;
+    let leftColHeight = heightChat - chatContainerTabs - leftChatColHeader -allContactsBtn.offsetHeight - 30;
+    document.querySelector('.left-col-list').style.height = `${leftColHeight}px`;
+    document.querySelectorAll('.chat-main').forEach((item)=>{
+        item.style.height = `${chatMainHeight}px`;
+    })
+}
