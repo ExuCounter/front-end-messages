@@ -485,8 +485,7 @@
     left: 0;
     height: 160px;
     width: 100%;
-    background: linear-gradient(to bottom, transparent, #FFF);
-    z-index: 1;
+    background: linear-gradient(to bottom, transparent, #cbcbcbbf);
 }
 
 .edit-chat .accord-contact-container .accord-contact{
