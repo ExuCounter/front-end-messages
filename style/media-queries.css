@@ -23,6 +23,9 @@
     .accord-contact-container .accord-contact{
         padding-bottom: 120px;
     }
+    .all-contacts .accord-contact-container .accord-contact {
+        padding-bottom: 20px;
+    }
 }
 
 /* MEDIA 1128PX */
@@ -178,6 +181,10 @@
     }
     .left-col-list:before{
         display: none;
+    }
+    
+    .accord-contact-container .accord-contact {
+        padding-bottom: 0;
     }
 }
 
