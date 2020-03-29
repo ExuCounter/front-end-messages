@@ -271,20 +271,6 @@
     position: relative;
 }
 
-.add-users .accord-contact{
-    padding-bottom: 40px;
-}
-
-.add-users .settings-buttons-container:before{
-    content: '';
-    position: absolute;
-    top: -80px;
-    height: 80px;
-    width: 100%;
-    background: linear-gradient(to bottom, transparent, #FFF);
-    z-index: 111;
-}
-
 .new-chat-input--container{
     position: relative;
 }
